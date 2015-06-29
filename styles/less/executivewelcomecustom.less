@@ -1,0 +1,128 @@
+body, html {
+  /* important */
+  height: 100%;
+}
+
+* {
+	transition: all .2s;
+}
+
+.navbar-header {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {float:none;}
+
+.section {
+    height: 100%;
+    padding-top: 150px; /*needed for sticky nav*/
+    text-align: center;
+}
+.navbar{
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:100;
+	.navbar-logo
+	{
+	/* 	hide logo until scrolled down */
+		display:none;
+	}
+}
+
+
+.top-nav-collapse 
+{
+	.navbar-logo
+	{
+	/* 	hide small logo until scrolled down */
+		display: table-cell;
+		width: 1%;
+		text-align: center;
+	}
+	.navbar-brand 
+	{
+	/* 	hide big logo when scrolled down */
+		display:none;
+	}
+}
+
+
+/* alternating scrolling bg */
+.cd-main-content {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+ .cd-fixed-bg h1, .cd-fixed-bg h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+.cd-scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.cd-scrolling-bg.cd-color-2, .cd-scrolling-bg.cd-color-4, .cd-scrolling-bg.cd-color-6, .cd-scrolling-bg.cd-color-8  {
+  background-color: #3d3536;
+  color: #a6989a;
+}
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("http://placehold.it/350x250?text=img1");
+}
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("http://placehold.it/350x250?text=img2");
+}
+.cd-fixed-bg.cd-bg-3 {
+  background-image: url("http://placehold.it/350x250?text=img3");
+}
+.cd-fixed-bg.cd-bg-4 {
+  background-image: url("http://placehold.it/350x250?text=img4");
+}
