@@ -23,7 +23,7 @@ body, html {
     text-align: center;
 }
 .navbar{
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-family: @headings-font-family;
 	font-weight:100;
 	.navbar-logo
 	{
@@ -32,6 +32,16 @@ body, html {
 	}
 }
 
+.nav-justified-narrow {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+	text-transform: uppercase;
+	font-size: @font-size-navbar-pills;
+	a {
+			color:@navbar-default-color;
+	}
+}
 
 .top-nav-collapse 
 {

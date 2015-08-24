@@ -1173,7 +1173,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -6796,6 +6796,16 @@ html {
   /* 	hide logo until scrolled down */
   display: none;
 }
+.nav-justified-narrow {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.nav-justified-narrow a {
+  color: white;
+}
 .top-nav-collapse .navbar-logo {
   /* 	hide small logo until scrolled down */
   display: table-cell;
@@ -6889,3 +6899,4 @@ html {
 .cd-fixed-bg.cd-bg-4 {
   background-image: url("http://placehold.it/350x250?text=img4");
 }
+/*# sourceMappingURL=executivewelcome.map */
