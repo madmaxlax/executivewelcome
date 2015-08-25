@@ -15,7 +15,15 @@ body, html {
     text-align: center;
     width: 100%;
 }
-.navbar-brand {float:none;}
+.navbar-brand {
+  float:none;
+  height: auto;
+  display: inline-block;
+  p {
+    margin-bottom: 0;
+    letter-spacing: 3px;
+  }
+}
 
 .section {
     height: 100%;
@@ -32,28 +40,65 @@ body, html {
 	}
 }
 
-.nav-justified-narrow {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-	text-transform: uppercase;
-	font-size: @font-size-navbar-pills;
-	a {
-			color:@navbar-default-color;
-	}
+ul.nav {
+  text-align: center;
+  padding-bottom: 10px;
+  li {
+    width: auto;
+    display: inline-block;
+    margin: 0 24px;
+    a {
+      border-bottom: 2px solid transparent;
+      padding-bottom: 5px;
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-bottom-width: 1px;
+        border-bottom-color: #89d2dc;
+        color: #89d2dc;
+      }
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus {
+      color: #89d2dc;
+      border-bottom: 2px solid #89d2dc;
+      background-color: transparent;
+    }
+  }
 }
 
-.top-nav-collapse 
-{
-	.navbar-logo
-	{
+.nav-justified-narrow {
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-size: @font-size-navbar-pills;
+  a {
+    color:@navbar-default-color;
+  }
+}
+
+.top-nav-collapse {
+  padding: 5px 0;
+  .nav {
+    padding-bottom: 7px;
+  }
+	.navbar-logo {
 	/* 	hide small logo until scrolled down */
-		display: table-cell;
-		width: 1%;
-		text-align: center;
+		display: inline-block;
+		width: auto;
+    position: absolute;
+    left: 0;
+    color: white;
+    letter-spacing: 2px;
 	}
-	.navbar-brand 
-	{
+	.navbar-brand {
 	/* 	hide big logo when scrolled down */
 		display:none;
 	}

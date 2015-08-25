@@ -6781,6 +6781,12 @@ html {
 }
 .navbar-brand {
   float: none;
+  height: auto;
+  display: inline-block;
+}
+.navbar-brand p {
+  margin-bottom: 0;
+  letter-spacing: 3px;
 }
 .section {
   height: 100%;
@@ -6796,8 +6802,40 @@ html {
   /* 	hide logo until scrolled down */
   display: none;
 }
+ul.nav {
+  text-align: center;
+  padding-bottom: 10px;
+}
+ul.nav li {
+  width: auto;
+  display: inline-block;
+  margin: 0 24px;
+}
+ul.nav li a {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+}
+ul.nav li a:hover,
+ul.nav li a:focus {
+  background-color: transparent;
+  border-bottom-width: 1px;
+  border-bottom-color: #89d2dc;
+  color: #89d2dc;
+}
+ul.nav li:first-child {
+  margin-left: 0;
+}
+ul.nav li:last-child {
+  margin-right: 0;
+}
+ul.nav li.active > a,
+ul.nav li.active > a:hover,
+ul.nav li.active > a:focus {
+  color: #89d2dc;
+  border-bottom: 2px solid #89d2dc;
+  background-color: transparent;
+}
 .nav-justified-narrow {
-  width: 600px;
   margin-left: auto;
   margin-right: auto;
   text-transform: uppercase;
@@ -6806,11 +6844,20 @@ html {
 .nav-justified-narrow a {
   color: white;
 }
+.top-nav-collapse {
+  padding: 5px 0;
+}
+.top-nav-collapse .nav {
+  padding-bottom: 7px;
+}
 .top-nav-collapse .navbar-logo {
   /* 	hide small logo until scrolled down */
-  display: table-cell;
-  width: 1%;
-  text-align: center;
+  display: inline-block;
+  width: auto;
+  position: absolute;
+  left: 0;
+  color: white;
+  letter-spacing: 2px;
 }
 .top-nav-collapse .navbar-brand {
   /* 	hide big logo when scrolled down */
@@ -6899,4 +6946,3 @@ html {
 .cd-fixed-bg.cd-bg-4 {
   background-image: url("http://placehold.it/350x250?text=img4");
 }
-/*# sourceMappingURL=executivewelcome.map */
