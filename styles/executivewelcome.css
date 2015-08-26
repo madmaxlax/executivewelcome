@@ -4018,7 +4018,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: transparent;
+  color: #89d2dc;
+  border-bottom-width: 1px;
+  border-bottom-color: #89d2dc;
+}
+.nav > li > a:active {
+  color: #2f909d;
 }
 .nav > li.disabled > a {
   color: #777777;
@@ -4033,7 +4039,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #eeeeee;
+  background-color: transparent;
   border-color: #337ab7;
 }
 .nav .nav-divider {
@@ -4064,10 +4070,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
+  color: transparent;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-bottom-color: transparent;
+  /*         border: 1px solid @nav-tabs-active-link-hover-border-color; */
+  /*         border-bottom-color: transparent; */
+  border-bottom: 2px solid #89d2dc;
   cursor: default;
 }
 .nav-tabs.nav-justified {
@@ -4127,7 +4134,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #337ab7;
+  background-color: transparent;
 }
 .nav-stacked > li {
   float: none;
@@ -4540,14 +4547,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
-  background-color: #16295d;
+  color: #89d2dc;
+  background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
-  background-color: #0a1127;
+  color: #62c3d0;
+  background-color: transparent;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4572,8 +4579,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #0a1127;
-  color: #555555;
+  background-color: transparent;
+  color: #62c3d0;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -4581,14 +4588,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333333;
-    background-color: #16295d;
+    color: #89d2dc;
+    background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555555;
-    background-color: #0a1127;
+    color: #62c3d0;
+    background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -4601,14 +4608,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: white;
 }
 .navbar-default .navbar-link:hover {
-  color: #333333;
+  color: #89d2dc;
 }
 .navbar-default .btn-link {
   color: white;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #333333;
+  color: #89d2dc;
 }
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,
@@ -6765,7 +6772,7 @@ button.close {
     display: none !important;
   }
 }
-/* grab the bootstrap less first */
+/* grab the bootstrap less first, which grabs all other less files needed */
 body,
 html {
   /* important */
@@ -6790,8 +6797,8 @@ html {
 }
 .section {
   height: 100%;
-  padding-top: 150px;
-  /*needed for sticky nav*/
+  /*needed for sticky nav */
+  padding-top: 129px;
   text-align: center;
 }
 .navbar {
@@ -6810,6 +6817,7 @@ ul.nav li {
   width: auto;
   display: inline-block;
   margin: 0 24px;
+  /* 	  active needed for scroll spy  */
 }
 ul.nav li a {
   border-bottom: 2px solid transparent;
@@ -6817,10 +6825,8 @@ ul.nav li a {
 }
 ul.nav li a:hover,
 ul.nav li a:focus {
-  background-color: transparent;
-  border-bottom-width: 1px;
-  border-bottom-color: #89d2dc;
-  color: #89d2dc;
+  /*         background-color: transparent; */
+  /*         color: #89d2dc; */
 }
 ul.nav li:first-child {
   margin-left: 0;
@@ -6833,7 +6839,7 @@ ul.nav li.active > a:hover,
 ul.nav li.active > a:focus {
   color: #89d2dc;
   border-bottom: 2px solid #89d2dc;
-  background-color: transparent;
+  /*       background-color: transparent; */
 }
 .nav-justified-narrow {
   margin-left: auto;
@@ -6854,8 +6860,8 @@ ul.nav li.active > a:focus {
   /* 	hide small logo until scrolled down */
   display: inline-block;
   width: auto;
-  position: absolute;
-  left: 0;
+  /* 		position: absolute; */
+  /* 		left: 0; */
   color: white;
   letter-spacing: 2px;
 }
@@ -6863,11 +6869,22 @@ ul.nav li.active > a:focus {
   /* 	hide big logo when scrolled down */
   display: none;
 }
+section.intro-section h1 {
+  font-size: 38px;
+  text-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 768px) {
+  section.intro-section h1 {
+    max-width: 618px;
+  }
+}
 /* alternating scrolling bg */
 .cd-main-content {
   height: 100%;
   position: relative;
   z-index: 1;
+  /* 	needed for sticky nav */
+  padding-top: 129px;
 }
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
@@ -6909,7 +6926,7 @@ ul.nav li.active > a:focus {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   color: white;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 768px) {
   .cd-fixed-bg {
     background-attachment: fixed;
   }
@@ -6946,3 +6963,4 @@ ul.nav li.active > a:focus {
 .cd-fixed-bg.cd-bg-4 {
   background-image: url("http://placehold.it/350x250?text=img4");
 }
+/*# sourceMappingURL=executivewelcome.map */

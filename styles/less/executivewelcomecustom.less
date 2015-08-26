@@ -1,4 +1,4 @@
-@import "bootstrap.less"; /* grab the bootstrap less first */
+@import "bootstrap.less"; /* grab the bootstrap less first, which grabs all other less files needed */
 
 
 body, html {
@@ -24,10 +24,13 @@ body, html {
     letter-spacing: 3px;
   }
 }
+@stickynav-height-padding: 129px;
+@execwelcome-logo-width: 618px;
 
 .section {
     height: 100%;
-    padding-top: 150px; /*needed for sticky nav*/
+	/*needed for sticky nav */
+    padding-top: @stickynav-height-padding;
     text-align: center;
 }
 .navbar{
@@ -52,10 +55,8 @@ ul.nav {
       padding-bottom: 5px;
       &:hover,
       &:focus {
-        background-color: transparent;
-        border-bottom-width: 1px;
-        border-bottom-color: #89d2dc;
-        color: #89d2dc;
+/*         background-color: transparent; */
+/*         color: #89d2dc; */
       }
     }
     &:first-child {
@@ -64,12 +65,13 @@ ul.nav {
     &:last-child {
       margin-right: 0;
     }
+/* 	  active needed for scroll spy  */
     &.active > a,
     &.active > a:hover,
     &.active > a:focus {
-      color: #89d2dc;
-      border-bottom: 2px solid #89d2dc;
-      background-color: transparent;
+      color: @execwelcome-nav-active-hover;
+      border-bottom: 2px solid @execwelcome-nav-active-hover;
+/*       background-color: transparent; */
     }
   }
 }
@@ -93,10 +95,10 @@ ul.nav {
 	/* 	hide small logo until scrolled down */
 		display: inline-block;
 		width: auto;
-    position: absolute;
-    left: 0;
-    color: white;
-    letter-spacing: 2px;
+/* 		position: absolute; */
+/* 		left: 0; */
+		color: white;
+		letter-spacing: 2px;
 	}
 	.navbar-brand {
 	/* 	hide big logo when scrolled down */
@@ -105,11 +107,27 @@ ul.nav {
 }
 
 
+section.intro-section
+{
+	h1
+	{
+		font-size: 38px;
+		text-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.5);
+
+		@media only screen and (min-width: @screen-sm-min) {
+			max-width: @execwelcome-logo-width;
+		}
+	}
+}
+
 /* alternating scrolling bg */
 .cd-main-content {
   height: 100%;
   position: relative;
   z-index: 1;
+/* 	needed for sticky nav */
+  padding-top: @stickynav-height-padding;
+	
 }
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
@@ -151,7 +169,7 @@ ul.nav {
   color: white;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: @screen-sm-min) {
   .cd-fixed-bg {
     background-attachment: fixed;
   }
