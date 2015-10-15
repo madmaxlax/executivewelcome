@@ -28,7 +28,7 @@ body, html {
 @execwelcome-logo-width: 618px;
 
 .section {
-    height: 100%;
+/*     height: 100%; */
 	/*needed for sticky nav */
     padding-top: @stickynav-height-padding;
     text-align: center;
@@ -120,6 +120,8 @@ section.intro-section
 	}
 }
 
+@execwelcome-text-color: @navbar-default-bg;
+@execwelcome-section-bg: white;
 /* alternating scrolling bg */
 .cd-main-content {
   height: 100%;
@@ -181,17 +183,59 @@ section.intro-section
 .cd-scrolling-bg {
   position: relative;
   min-height: 100%;
-  padding: 4em 0;
+  padding: 1em 0;
   line-height: 1.6;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
+/*HR style behind header text  */
+.sectionhr{
+	width:100%; 
+	text-align:center; 
+	border-bottom: 3px solid @execwelcome-text-color; 
+	line-height:0.1em; 
+	margin:22px 0 20px;
+	
+	.sectionhr-header
+	{
+		background:#fff; 
+		padding:0 10px;
+		font-size: 28px;
+		font-weight: 300;
+	}
+}
+.section-subhead
+{
+	font-size:24px;
+	font-weight:600;
+}
+.bio-image
+{
+	float:left;
+	padding: 22px 11px 22px 0
+}
+.bio-header
+{
+	text-align:left;
+	font-size: 24px;
+	font-weight:300;
+}
+@execwelcome-text:black;
+.bio-text
+{
+	color: @execwelcome-text;
+	text-align:left;
+	font-size: 16px;
+	font-weight:300;	
+	font-family:@font-family-sans-serif;
+}
+
 .cd-scrolling-bg.cd-color-2, .cd-scrolling-bg.cd-color-4, .cd-scrolling-bg.cd-color-6, .cd-scrolling-bg.cd-color-8  {
-  background-color: #3d3536;
-  color: #a6989a;
+  background-color: @execwelcome-section-bg;
+  color: @execwelcome-text-color;
 }
 .cd-fixed-bg.cd-bg-1 {
-  background-image: url("http://placehold.it/350x250?text=img1");
+  background-image: url("/imgs/originals/BALTOPHOTO.ORG.W61zKN-baltimore-from-gwynns-falls.jpg");
 }
 .cd-fixed-bg.cd-bg-2 {
   background-image: url("http://placehold.it/350x250?text=img2");
