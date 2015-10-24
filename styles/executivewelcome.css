@@ -6869,6 +6869,12 @@ ul.nav li.active > a:focus {
   /* 	hide big logo when scrolled down */
   display: none;
 }
+.cd-main-content p::selection,
+.cd-main-content p::-moz-selection {
+  color: white;
+  background: white;
+  text-shadow: none;
+}
 section.intro-section h1 {
   font-size: 38px;
   text-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.5);
@@ -6926,10 +6932,10 @@ section.intro-section h1 {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   color: white;
 }
+.cd-fixed-bg {
+  background-attachment: fixed;
+}
 @media only screen and (min-width: 768px) {
-  .cd-fixed-bg {
-    background-attachment: fixed;
-  }
   .cd-fixed-bg h1,
   .cd-fixed-bg h2 {
     font-size: 48px;
@@ -6964,7 +6970,7 @@ section.intro-section h1 {
 }
 .bio-image {
   float: left;
-  padding: 22px 11px 22px 0;
+  padding: 10px 11px 22px 0;
 }
 .bio-header {
   text-align: left;
@@ -6992,7 +6998,7 @@ section.intro-section h1 {
   background-image: url("http://placehold.it/350x250?text=img2");
 }
 .cd-fixed-bg.cd-bg-3 {
-  background-image: url("http://placehold.it/350x250?text=img3");
+  background-image: url("http://placehold.it/350x250?text=3-imgs-here");
 }
 .cd-fixed-bg.cd-bg-4 {
   background-image: url("http://placehold.it/350x250?text=img4");

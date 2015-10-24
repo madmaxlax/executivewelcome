@@ -106,6 +106,12 @@ ul.nav {
 	}
 }
 
+.cd-main-content p::selection,.cd-main-content p::-moz-selection
+{
+	color: white;
+	background: @navbar-default-color;
+	text-shadow: none;
+}
 
 section.intro-section
 {
@@ -170,11 +176,11 @@ section.intro-section
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   color: white;
 }
-
-@media only screen and (min-width: @screen-sm-min) {
-  .cd-fixed-bg {
+ .cd-fixed-bg {
     background-attachment: fixed;
   }
+@media only screen and (min-width: @screen-sm-min) {
+
   .cd-fixed-bg h1, .cd-fixed-bg h2 {
     font-size: 48px;
     font-weight: 300;
@@ -212,7 +218,7 @@ section.intro-section
 .bio-image
 {
 	float:left;
-	padding: 22px 11px 22px 0
+	padding: 10px 11px 22px 0
 }
 .bio-header
 {
@@ -241,7 +247,7 @@ section.intro-section
   background-image: url("http://placehold.it/350x250?text=img2");
 }
 .cd-fixed-bg.cd-bg-3 {
-  background-image: url("http://placehold.it/350x250?text=img3");
+  background-image: url("http://placehold.it/350x250?text=3-imgs-here");
 }
 .cd-fixed-bg.cd-bg-4 {
   background-image: url("http://placehold.it/350x250?text=img4");
