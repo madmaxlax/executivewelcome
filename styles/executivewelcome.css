@@ -6883,6 +6883,7 @@ ul.nav li.active > a:focus {
 section.intro-section h1 {
   font-size: 40px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  line-height: 2em;
   font-weight: 300;
   /*make it fit the width of the logo when in fuller screens*/
   /*make it a smaller font when on a phone*/
@@ -6895,6 +6896,7 @@ section.intro-section h1 {
 @media only screen and (max-width: 768px) {
   section.intro-section h1 {
     font-size: 28px;
+    line-height: 1.5em;
   }
 }
 /*testimonials*/
@@ -6979,13 +6981,15 @@ section.intro-section h1 {
   .cd-fixed-bg h1,
   .cd-fixed-bg h2 {
     font-size: 48px;
+    /* 		padding-bottom:100px; */
     font-weight: 300;
   }
 }
 .cd-scrolling-bg {
   position: relative;
   min-height: 100%;
-  padding: 1em 0;
+  padding: 1em 0 1em 0;
+  /*   padding: @stickynav-height-padding 0 1em 0; */
   line-height: 1.6;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   z-index: 2;
@@ -7023,6 +7027,9 @@ section.intro-section h1 {
   font-size: 16px;
   font-weight: 300;
   font-family: "Lora", Helvetica, Arial, sans-serif;
+}
+#footer {
+  min-height: 100px;
 }
 .cd-scrolling-bg.cd-color-2,
 .cd-scrolling-bg.cd-color-4,

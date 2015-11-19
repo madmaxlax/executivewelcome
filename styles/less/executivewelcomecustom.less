@@ -128,6 +128,7 @@ section.intro-section
 	{
 		font-size: 40px;
 		text-shadow: 0 2px 4px rgba(0, 0, 0, .8);
+		line-height:2em;
 		font-weight: 300;
         /*make it fit the width of the logo when in fuller screens*/
 		@media only screen and (min-width: @screen-sm-min) {
@@ -137,6 +138,7 @@ section.intro-section
 		
 		@media only screen and (max-width: @screen-sm-min) {
 			font-size: 28px;
+			line-height:1.5em;
 		}
 	}
 }
@@ -233,13 +235,15 @@ section.intro-section
 
   .cd-fixed-bg h1, .cd-fixed-bg h2 {
     font-size: 48px;
+/* 		padding-bottom:100px; */
     font-weight: 300;
   }
 }
 .cd-scrolling-bg {
   position: relative;
   min-height: 100%;
-  padding: 1em 0;
+  padding: 1em 0 1em 0;
+/*   padding: @stickynav-height-padding 0 1em 0; */
   line-height: 1.6;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   z-index: 2;
@@ -285,7 +289,10 @@ section.intro-section
 	font-weight:300;	
 	font-family:@font-family-sans-serif;
 }
-
+#footer
+{
+	min-height:100px
+}
 .cd-scrolling-bg.cd-color-2, .cd-scrolling-bg.cd-color-4, .cd-scrolling-bg.cd-color-6, .cd-scrolling-bg.cd-color-8  {
   background-color: @execwelcome-section-bg;
   color: @execwelcome-text-color;
