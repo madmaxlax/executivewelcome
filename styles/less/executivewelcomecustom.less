@@ -32,6 +32,15 @@ body, html {
 	/*needed for sticky nav */
     padding-top: @stickynav-height-padding;
     text-align: center;
+    font-size:18px;
+    ul
+    {
+        list-style-position: inside;
+        line-height: 2em;
+        li
+        {
+        }
+    }
 }
 .navbar{
 	font-family: @headings-font-family;
@@ -117,17 +126,47 @@ section.intro-section
 {
 	h1
 	{
-		font-size: 38px;
-		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-
+		font-size: 40px;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, .8);
+		font-weight: 300;
+        /*make it fit the width of the logo when in fuller screens*/
 		@media only screen and (min-width: @screen-sm-min) {
 			max-width: @execwelcome-logo-width;
 		}
+		/*make it a smaller font when on a phone*/
+		
+		@media only screen and (max-width: @screen-sm-min) {
+			font-size: 28px;
+		}
+	}
+}
+@execwelcome-text-color: @navbar-default-bg;
+@execwelcome-section-bg: white;
+
+/*testimonials*/
+@testimonial-line:solid 2px @execwelcome-text-color;
+.testimonial-box
+{
+/* 	&:extend(.col-lg-6); extend wasnt working */
+	margin-top:2em;
+	margin-bottom:2em;
+	border: @testimonial-line;
+	.testimonial-testi
+	{
+		padding: 1em;
+		border-bottom:@testimonial-line;
+	}
+	.testimonial-company
+	{
+		font-style:italic;
+	}
+	.testimonial-quote-box
+	{
+		padding:1em;
 	}
 }
 
-@execwelcome-text-color: @navbar-default-bg;
-@execwelcome-section-bg: white;
+
 /* alternating scrolling bg */
 .cd-main-content {
   height: 100%;
@@ -176,9 +215,20 @@ section.intro-section
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   color: white;
 }
- .cd-fixed-bg {
-    background-attachment: fixed;
-  }
+
+.cd-fixed-bg {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@media only screen and (min-width: @screen-md-min) {
+    .cd-fixed-bg {
+        background-attachment: fixed;
+    }
+}
 @media only screen and (min-width: @screen-sm-min) {
 
   .cd-fixed-bg h1, .cd-fixed-bg h2 {
@@ -241,8 +291,7 @@ section.intro-section
   color: @execwelcome-text-color;
 }
 .cd-fixed-bg.cd-bg-1 {
-  background: 
-    url("/imgs/bgs/BaltimoreBlurredBrighter.png");
+  background-image: url("/imgs/bgs/BALTOPHOTOblurredlayer.jpg");
 }
 .cd-fixed-bg.cd-bg-2 {
   background-image: url("http://placehold.it/350x250?text=img2");

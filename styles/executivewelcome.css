@@ -6800,6 +6800,11 @@ html {
   /*needed for sticky nav */
   padding-top: 129px;
   text-align: center;
+  font-size: 18px;
+}
+.section ul {
+  list-style-position: inside;
+  line-height: 2em;
 }
 .navbar {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -6876,13 +6881,38 @@ ul.nav li.active > a:focus {
   text-shadow: none;
 }
 section.intro-section h1 {
-  font-size: 38px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 300;
+  /*make it fit the width of the logo when in fuller screens*/
+  /*make it a smaller font when on a phone*/
 }
 @media only screen and (min-width: 768px) {
   section.intro-section h1 {
     max-width: 618px;
   }
+}
+@media only screen and (max-width: 768px) {
+  section.intro-section h1 {
+    font-size: 28px;
+  }
+}
+/*testimonials*/
+.testimonial-box {
+  /* 	&:extend(.col-lg-6); extend wasnt working */
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: solid 2px #101d42;
+}
+.testimonial-box .testimonial-testi {
+  padding: 1em;
+  border-bottom: solid 2px #101d42;
+}
+.testimonial-box .testimonial-company {
+  font-style: italic;
+}
+.testimonial-box .testimonial-quote-box {
+  padding: 1em;
 }
 /* alternating scrolling bg */
 .cd-main-content {
@@ -6933,7 +6963,17 @@ section.intro-section h1 {
   color: white;
 }
 .cd-fixed-bg {
-  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media only screen and (min-width: 992px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
 }
 @media only screen and (min-width: 768px) {
   .cd-fixed-bg h1,
@@ -6992,7 +7032,7 @@ section.intro-section h1 {
   color: #101d42;
 }
 .cd-fixed-bg.cd-bg-1 {
-  background: url("/imgs/bgs/BaltimoreBlurredBrighter.png");
+  background-image: url("/imgs/bgs/BALTOPHOTOblurredlayer.jpg");
 }
 .cd-fixed-bg.cd-bg-2 {
   background-image: url("http://placehold.it/350x250?text=img2");
