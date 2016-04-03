@@ -145,26 +145,40 @@ section.intro-section
 @execwelcome-text-color: @navbar-default-bg;
 @execwelcome-section-bg: white;
 
-/*testimonials*/
-@testimonial-line:solid 2px @execwelcome-text-color;
+/*testimonial-bordermonials*/
+@testimonial-border:solid 2px @execwelcome-text-color;
+@testimonial-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 12px rgba(82, 168, 236, 0.6);
 .testimonial-box
 {
 /* 	&:extend(.col-lg-6); extend wasnt working */
 	margin-top:2em;
-	margin-bottom:2em;
-	border: @testimonial-line;
+	/* margin-bottom:2em; */
+	border: @testimonial-border;
+	&:hover
+	{
+		outline: thin dotted \9;
+		-webkit-box-shadow: @testimonial-box-shadow;
+		-moz-box-shadow: @testimonial-box-shadow;
+		box-shadow: @testimonial-box-shadow;
+	
+	}
 	.testimonial-testi
 	{
 		padding: 1em;
-		border-bottom:@testimonial-line;
+		border-bottom:@testimonial-border;
+		font-family: OpenSans-Light;
+		font-weight:bolder;
+		font-size:18px;
 	}
 	.testimonial-company
 	{
 		font-style:italic;
+		color:black;
 	}
 	.testimonial-quote-box
 	{
 		padding:1em;
+		font-size:16px;
 	}
 }
 
