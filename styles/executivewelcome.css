@@ -6773,6 +6773,30 @@ button.close {
   }
 }
 /* grab the bootstrap less first, which grabs all other less files needed */
+/* add font awesome for social icons */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../styles/fonts/fontawesome-webfont.eot?v=4.6.1');
+  src: url('../styles/fonts/fontawesome-webfont.eot?#iefix&v=4.6.1') format('embedded-opentype'), url('../styles/fonts/fontawesome-webfont.woff2?v=4.6.1') format('woff2'), url('../styles/fonts/fontawesome-webfont.woff?v=4.6.1') format('woff'), url('../styles/fonts/fontawesome-webfont.ttf?v=4.6.1') format('truetype'), url('../styles/fonts/fontawesome-webfont.svg?v=4.6.1#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*only need facebook and linked in */
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "\f09a";
+}
+.fa-linkedin:before {
+  content: "\f08c";
+}
 body,
 html {
   /* important */
@@ -6794,6 +6818,9 @@ html {
 .navbar-brand p {
   margin-bottom: 0;
   letter-spacing: 3px;
+  display: inline;
+  line-height: 47px;
+  vertical-align: middle;
 }
 .section {
   /*     height: 100%; */
@@ -7025,7 +7052,8 @@ section.intro-section h1 {
 }
 .bio-image {
   float: left;
-  padding: 10px 11px 22px 0;
+  margin: 20px 10px 10px 0;
+  border: solid 1px #101d42;
 }
 .bio-header {
   text-align: left;
@@ -7041,6 +7069,39 @@ section.intro-section h1 {
 }
 #footer {
   min-height: 100px;
+}
+#footer .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #fff;
+  line-height: 50px;
+  float: left;
+  text-align: center;
+  margin-left: 12.5px;
+  margin-right: 12.5px;
+  margin-bottom: 12.5px;
+  display: inline-block;
+  box-shadow: 2px 2px 5px #888888;
+}
+#footer .circle.facebook {
+  background: #3b5998;
+}
+#footer .circle.linkedin {
+  background: #0077B5;
+}
+#footer .circle:hover {
+  /* margin-top: inherit; */
+  transform: rotateY(360deg);
+  transition: 0.4s;
+  margin-top: -5px;
+}
+#footer .circle.facebook:hover {
+  background: #718dc8;
+}
+#footer .circle.linkedin:hover {
+  background: #2585B7;
 }
 .cd-scrolling-bg.cd-color-2,
 .cd-scrolling-bg.cd-color-4,
