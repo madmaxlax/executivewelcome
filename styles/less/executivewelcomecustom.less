@@ -330,14 +330,15 @@ section.intro-section
 	text-align:left;
 	font-size: 16px;
 	font-weight:300;	
-	font-family:@font-family-sans-serif;
+	font-color:@font-family-sans-serif;
 }
 #contact
 {
 	@base: @navbar-default-bg;
 	@text: @execwelcome-text-color;
-	@invalid: #E91E63;
-	@width: 400px;
+	@invalid-color: #E91E63;
+	@width: 100%;
+	@offscreen:2000px;
 	@cubic: cubic-bezier(.64,.09,.08,1);
 
 	html, body {
@@ -350,9 +351,12 @@ section.intro-section
 
 
 	form {
-		width: @width + 60px;
+		/* 		width: @width + 60px; */
+		
+		/* 	font-family:@font-family-sans-serif; */
+		font-family:@headings-font-family;
 		margin: 0 auto 0;
-		box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+/* 		box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2); */
 		padding: 0 0 40px;
 		border-radius: 3px;
 		color: @text;
@@ -370,19 +374,20 @@ section.intro-section
 	textarea {
 		font: inherit;
 		font-size: 0.8em;
-		margin: 28px 25px 10px;
-		width: @width;
+ 		margin: 10px 0 10px 0;
+/* 		width: @width; */
 		display: block;
 		border: none;
-		padding: 20px 0 10px;
+		padding: 20px 0 10px 0;
 		border-bottom: solid 1px @base;
 		background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, @base 4%);
-		background-position: -@width 0;
+		background-position: -@offscreen 0;
 		background-size: @width 100%;
 		background-repeat: no-repeat;
 		transition: background 0.3s @cubic;
 		resize: none;
 		overflow: hidden; 
+		width:@width;
 		&:focus::-webkit-input-placeholder {
 			color: @base;
 		}  
@@ -390,32 +395,33 @@ section.intro-section
 		&:valid {
 			box-shadow: none;
 			outline: none;
-			background-position: 0 0;
-			&::-webkit-input-placeholder {
-				font-size: 0.8em;
-				transform: translateY(-20px);
-				visibility: visible !important;
-				opacity: 1;
+			
+			&:not([value=""]),&:focus {
+				background-position: 0 0;
+				&::-webkit-input-placeholder {
+					font-size: 0.8em;
+					transform: translateY(-20px);
+					visibility: visible !important;
+					opacity: 1;
+				}
 			}
 		}  
 	}
 
 	input[type="email"] {
-		background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, @base 4%);
+/* 		background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, @base 4%);
 		background-position: -400px 0;
 		background-repeat: no-repeat;
-		transition: border-bottom 0.3s ease, background 0.3s ease;
+		transition: border-bottom 0.3s ease, background 0.3s ease; */
 		&~span.validation-text {
-			position: absolute;
 			visibility: hidden;
-			font-size: 0.6em;
 			width: @width;
 			margin-left: 25px;
 			margin-top:-5px;
 			color: white;
 			transition: color 0.3s ease-in-out;
 		}
-		&:not([value=""]) {
+/* 		&:not([value=""]) {
 			&::-webkit-input-placeholder {
 				font-size: 0.8em;
 				transform: translateY(-20px);
@@ -426,26 +432,26 @@ section.intro-section
 				color: @base;
 			}
 			&:focus:not(:valid)::-webkit-input-placeholder {
-				color: @invalid;
+				color: @invalid-color;
 			}
-		}
-		&:focus {
+		} */
+/* 		&:focus {
 			background-position: 0 0;
 			&:not(:valid):not([value=""]) {
-				border-bottom: solid 1px @invalid;
-				background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, @invalid 4%);
+				border-bottom: solid 1px @invalid-color;
+				background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, @invalid-color 4%);
 			}
-		}
+		} */
 		&:not(:focus):not(:valid):not([value=""]) {
-			&::-webkit-input-placeholder {
-				color: @invalid;
+/* 			&::-webkit-input-placeholder {
+				color: @invalid-color;
 			}
-			border-bottom: solid 1px @invalid;
+			border-bottom: solid 1px @invalid-color;
 			background-position: 0 0 ;
-			background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, @invalid 4%);
+			background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, @invalid-color 4%); */
 			&~span.validation-text {
 				visibility: visible;
-				color: @invalid;
+				color: @invalid-color;
 			}
 		}
 	}
@@ -466,13 +472,17 @@ section.intro-section
 		cursor: pointer;
 		border-radius: 3px;
 		padding: 6px;
-		width: @width;
+		width: (@width/2);
 		color: white;
 		margin: 30px 0 0 25px;
 		box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
 		&:hover { 
 			transform: translateY(-2px);
 			box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+			background: lighten(@base,20%);			
+		}
+		&:active{
+			background: darken(@base,20%);
 		}
 	}
 
@@ -520,6 +530,8 @@ section.intro-section
 {
 	min-height:100px;
 	z-index:1;
+/* 	font-family:@font-family-sans-serif; */
+	font-family:@headings-font-family;
 }
 #footer .circle {
     width: 50px;
