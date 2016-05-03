@@ -4548,7 +4548,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #89d2dc;
-  background-color: #16295d;
+  background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -4589,7 +4589,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #89d2dc;
-    background-color: #16295d;
+    background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
@@ -6819,6 +6819,22 @@ html {
 .navbar .navbar-logo {
   /* 	hide logo until scrolled down */
   display: none;
+}
+/*change bootstrap nav aspects*/
+.nav > li > a:hover,
+.nav > li > a:focus {
+  color: #89d2dc;
+  border-bottom-width: 1px;
+  border-bottom-color: #89d2dc;
+}
+.nav > li > a:active {
+  color: #2f909d;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: none;
+  border-bottom: 2px solid #89d2dc;
 }
 ul.nav {
   text-align: center;

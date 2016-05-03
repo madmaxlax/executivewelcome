@@ -2,12 +2,30 @@
 
 /*changing bootstrap vars */
 @font-family-sans-serif:  "Lora", Helvetica, Arial, sans-serif;
+@headings-font-family:    "Open Sans", Helvetica, Arial, sans-serif;
 @navbar-default-color: white;
 @navbar-default-bg: #101d42;
 @border-radius-pills:0px;
+
+@navbar-default-link-color:                white;
+@navbar-default-link-hover-color:          @execwelcome-nav-active-hover;
+@navbar-default-link-active-color:         darken(@execwelcome-nav-active-hover, 10%);
+@navbar-default-link-active-bg:            transparent;
+
 @navbar-default-link-color:white;
-@navbar-default-link-hover-bg:lighten(@navbar-default-bg, 6.5%);
+@navbar-default-link-hover-color: @execwelcome-nav-active-hover;
+@navbar-default-link-active-color: darken(@execwelcome-nav-active-hover, 10%);
+@navbar-default-link-active-bg: transparent;
+
+@nav-link-hover-bg: @execwelcome-nav-active-hover-bg;
+
+@nav-tabs-active-link-hover-color: @execwelcome-nav-active-hover-bg;
+
+@font-size-navbar-brand:  50px;
+@font-size-navbar-pills:  18px;
+
 @nav-pills-border-radius: @border-radius-pills;
+@nav-pills-active-link-hover-bg: @execwelcome-nav-active-hover-bg;
 
 /* vars */
 @execwelcome-text:black;
@@ -74,6 +92,40 @@ body, html {
 		display:none;
 	}
 }
+/*change bootstrap nav aspects*/
+
+.nav {
+  > li {
+    > a {
+      &:hover,
+      &:focus {
+				color: @execwelcome-nav-active-hover;
+        border-bottom-width: 1px;
+        border-bottom-color: @execwelcome-nav-active-hover;
+      }
+		 &:active
+			{
+				color: darken(@execwelcome-nav-active-hover, 30%);
+			}
+    }
+
+  }
+}
+
+.nav-tabs {
+  > li {
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+				border:none;
+        border-bottom: 2px solid @execwelcome-nav-active-hover;
+      }
+    }
+  }
+}
+
 
 ul.nav {
   text-align: center;
