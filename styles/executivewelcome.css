@@ -7061,21 +7061,10 @@ section.intro-section h1 {
   font-weight: 300;
   font-color: "Lora", Helvetica, Arial, sans-serif;
 }
-#contact html,
-#contact body {
-  overflow-x: hidden;
-}
-#contact html,
-#contact body,
 #contact form {
   box-sizing: border-box;
-}
-#contact form {
-  /* 		width: @width + 60px; */
-  /* 	font-family:@font-family-sans-serif; */
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   margin: 0 auto 0;
-  /* 		box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2); */
   padding: 0 0 40px;
   border-radius: 3px;
   color: #101d42;
@@ -7177,31 +7166,8 @@ section.intro-section h1 {
   background: #000000;
   transform: translateY(1px);
 }
-#contact a {
-  width: 42px;
-  height: 42px;
-  border-radius: 50px;
-  background: #101d42;
-  display: inline-block;
-  margin: 50px calc(29%);
-  white-space: nowrap;
-  padding: 13px;
-  box-sizing: border-box;
-  color: white;
-  transition: all 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  text-decoration: none;
-  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
-}
-#contact a i {
-  margin-right: 20px;
-  transition: margin-right 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-}
-#contact a:hover {
-  width: 134px;
-  transform: translateX(-50px);
-}
-#contact a:hover i {
-  margin-right: 10px;
+#contact .contact-social-link {
+  margin: 40px 0;
 }
 #footer {
   min-height: 100px;
