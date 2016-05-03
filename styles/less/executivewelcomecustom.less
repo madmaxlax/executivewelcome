@@ -197,12 +197,21 @@ ul.nav {
 	text-shadow: none;
 }
 #services {
-	.sectionhr-header{
-		line-height:initial;
+	li {
+		padding: 20px 0 0 0;
+	}
+	@media (max-width: @screen-sm-min){
+		.sectionhr-header{
+			line-height:initial;
+		}
 	}
 }
-.section ul {
-		padding:0;
+.section ul  {
+	padding:0;
+	ul 
+	{
+		padding:0 0 0 10px;
+	}
 }
 section.intro-section
 {

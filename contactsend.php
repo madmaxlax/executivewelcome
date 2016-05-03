@@ -8,7 +8,7 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['emailaddress']) && isset($_REQU
 		//$to      = 'susiechisolm@gmail.com,maxstruever@gmail.com';
 		$to      = 'maxstruever@gmail.com';
 	$subject = 'Executive Welcome Contact from "'.$_REQUEST['name'].'"';
-	$body = 'From: '.$_REQUEST['name']. "\r\n" .'Email: '.$_REQUEST['emailaddress']. "\r\n".'Phone: '.$_REQUEST['phone1'].'\r\n' .'Message:'. "\r\n" .$_REQUEST['comment'];
+	$body = 'From: '.$_REQUEST['name']. "\r\n" .'Email: '.$_REQUEST['emailaddress']. "\r\n".'Phone: '.$_REQUEST['phonenumber']."\r\n" .'Message:'. "\r\n" .$_REQUEST['comment'];
 
 	$from = "Executive Welcome Contact Form <site@executivewelcome.net>";
 

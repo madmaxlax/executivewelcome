@@ -6902,11 +6902,19 @@ ul.nav li.active > a:focus {
   background: white;
   text-shadow: none;
 }
-#services .sectionhr-header {
-  line-height: initial;
+#services li {
+  padding: 20px 0 0 0;
+}
+@media (max-width: 768px) {
+  #services .sectionhr-header {
+    line-height: initial;
+  }
 }
 .section ul {
   padding: 0;
+}
+.section ul ul {
+  padding: 0 0 0 10px;
 }
 section.intro-section h1 {
   font-size: 40px;
