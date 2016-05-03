@@ -6902,6 +6902,12 @@ ul.nav li.active > a:focus {
   background: white;
   text-shadow: none;
 }
+#services .sectionhr-header {
+  line-height: initial;
+}
+.section ul {
+  padding: 0;
+}
 section.intro-section h1 {
   font-size: 40px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -7019,7 +7025,7 @@ section.intro-section h1 {
 }
 .cd-scrolling-bg {
   position: relative;
-  min-height: 100%;
+  /*   min-height: 100%; */
   padding: 1em 0 1em 0;
   /*   padding: @stickynav-height-padding 0 1em 0; */
   line-height: 1.6;
@@ -7060,6 +7066,9 @@ section.intro-section h1 {
   font-size: 16px;
   font-weight: 300;
   font-color: "Lora", Helvetica, Arial, sans-serif;
+}
+#links ul {
+  text-align: initial;
 }
 #contact form {
   box-sizing: border-box;

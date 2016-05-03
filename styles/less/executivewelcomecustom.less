@@ -196,7 +196,14 @@ ul.nav {
 	background: @navbar-default-color;
 	text-shadow: none;
 }
-
+#services {
+	.sectionhr-header{
+		line-height:initial;
+	}
+}
+.section ul {
+		padding:0;
+}
 section.intro-section
 {
 	h1
@@ -325,7 +332,7 @@ section.intro-section
 }
 .cd-scrolling-bg {
   position: relative;
-  min-height: 100%;
+/*   min-height: 100%; */
   padding: 1em 0 1em 0;
 /*   padding: @stickynav-height-padding 0 1em 0; */
   line-height: 1.6;
@@ -372,6 +379,11 @@ section.intro-section
 	font-size: 16px;
 	font-weight:300;	
 	font-color:@font-family-sans-serif;
+}
+#links {
+	ul {
+		text-align:initial;
+	}
 }
 #contact
 {
