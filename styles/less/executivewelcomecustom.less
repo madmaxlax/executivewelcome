@@ -68,6 +68,10 @@ body, html {
   }
 }
 
+.cd-scrolling-bg{
+  background-color: @execwelcome-section-bg;
+  color: @execwelcome-text-color;
+}
 .section {
 /*     height: 100%; */
 	/*needed for sticky nav */
@@ -513,15 +517,35 @@ section.intro-section
 
 	.contact-social-link{
 		margin: 40px 0;
+		img {
+			vertical-align:top;
+		}
+		.fb-like{
+			top:-5px;
+		}
 	}
 }
 #footer
 {
+	.navbar;
+	a {
+		color: @execwelcome-nav-active-hover;
+	 &:active
+		{
+			color: darken(@execwelcome-nav-active-hover, 30%);
+		}
+		&:focus
+		{
+			border-bottom-width: 1px;
+			border-bottom-color: @execwelcome-nav-active-hover;
+		}
+	}
 	min-height:100px;
 /* 	font-family:@font-family-sans-serif; */
 	font-family:@headings-font-family;
 	color:@navbar-default-color;
 	background-color:@navbar-default-bg; 
+	margin-bottom:0;
 	.circle {
 		width: 50px;
 		height: 50px;
@@ -558,10 +582,6 @@ section.intro-section
 	}
 }
 
-.cd-scrolling-bg.cd-color-2, .cd-scrolling-bg.cd-color-4, .cd-scrolling-bg.cd-color-6, .cd-scrolling-bg.cd-color-8  {
-  background-color: @execwelcome-section-bg;
-  color: @execwelcome-text-color;
-}
 .cd-fixed-bg.cd-bg-1 {
   background-image: url("/imgs/bgs/BALTOPHOTOblurredlayer.jpg");
 }
@@ -573,4 +593,7 @@ section.intro-section
 }
 .cd-fixed-bg.cd-bg-4 {
   background-image: url("http://placehold.it/350x250?text=img4");
+}
+.cd-fixed-bg.cd-bg-5 {
+  background-image: url("http://placehold.it/350x250?text=img5");
 }

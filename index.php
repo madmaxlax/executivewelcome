@@ -35,6 +35,18 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="200">
 
+	<!-- FB necessary -->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=600350606801127";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<!-- Navigation -->
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -139,7 +151,7 @@
 			<div class="clearfix"></div>
 		</section>
 		<!-- photos in between -->
-		<section id="imgsinbetween" class="services-section section cd-fixed-bg cd-bg-3">
+		<section id="imgsinbetween" class="services-section section cd-fixed-bg cd-bg-2">
 
 		</section>
 		<!-- Services Section -->
@@ -231,7 +243,7 @@
 			</div>
 		</section>
 		<!-- photos in between -->
-		<section id="imgsinbetween2" class="services-section section cd-fixed-bg cd-bg-5">
+		<section id="imgsinbetween3" class="services-section section cd-fixed-bg cd-bg-4">
 		</section>
 		<!-- Services Section -->
 
@@ -239,8 +251,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<h1 class="sectionhr"><span class="sectionhr-header">Related Links:</span></h1></div>
-
+						<h1 class="sectionhr"><span class="sectionhr-header">Related Links:</span></h1>
+					</div>
+					<br/>
 					<div class="col-lg-4 col-sm-6">
 						<ul>
 							<li>Great Information About Baltimore</li>
@@ -289,7 +302,7 @@
 		</section>
 
 		<!-- photos in between -->
-		<section id="imgsinbetween2" class="services-section section cd-fixed-bg cd-bg-3">
+		<section id="imgsinbetween4" class="services-section section cd-fixed-bg cd-bg-5">
 
 		</section>
 		<!-- Contact Section -->
@@ -304,6 +317,7 @@
 							<a href="https://www.facebook.com/Executive-Welcome-161256610565493/">
 								<img src="imgs/f_icon.svg" height="22px" alt=""> Executive Welcome on Facebook
 							</a>
+							<div class="fb-like" data-href="https://www.facebook.com/Executive-Welcome-161256610565493/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 						</div>
 						<div class="contact-social-link">
 							<a href="https://www.linkedin.com/in/susie-chisolm-29843617">
@@ -315,46 +329,46 @@
 							if (isset($_REQUEST['contactsentsuccess']) && $_REQUEST['contactsentsuccess'])
 									{ 
 						?>
-						<div class="row">
+							<div class="row">
 								<div class="col-lg-12">
 									<div class="contact-success-message alert alert-success">
-										Thank you for your message! 
+										Thank you for your message!
 									</div>
+								</div>
 							</div>
-						</div>
-						<?php
+							<?php
 							}
 							else {
 						?>
-						<form method="post" action ="contactsend.php" id="contactformpage">
-							<!-- form format courtesy of @mildrenben http://codepen.io/mildrenben/pen/raqJvy -->
+								<form method="post" action="contactsend.php" id="contactformpage">
+									<!-- form format courtesy of @mildrenben http://codepen.io/mildrenben/pen/raqJvy -->
 
-							<div class="row">
-								<div class="col-md-6">
-									<input placeholder="Your Full Name" type="text" value=""  name="name" required>
-									<!-- 									<span class="validation-text">Your name is required.</span> -->
-								</div>
+									<div class="row">
+										<div class="col-md-6">
+											<input placeholder="Your Full Name" type="text" value="" name="name" required>
+											<!-- 									<span class="validation-text">Your name is required.</span> -->
+										</div>
 
-							</div>
-							<div class="row">
-								<div type="text" class="col-md-6">
-									<input placeholder="Email address" type="email" name="emailaddress" required>
-									<!-- 									<span class="validation-text">Please enter a valid email address.</span> -->
-								</div>
-								<div class="col-md-6">
-									<input placeholder="Phone number"  name="phonenumber" type="text" value="">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-12">
-									<div class="flex">
-										<textarea placeholder="Message"  name="comment" rows="3" required></textarea>
 									</div>
-								</div>
-							</div>
-							<button name="submit" type="submit" >Send</button>
-						</form>
-						<?php
+									<div class="row">
+										<div type="text" class="col-md-6">
+											<input placeholder="Email address" type="email" name="emailaddress" required>
+											<!-- 									<span class="validation-text">Please enter a valid email address.</span> -->
+										</div>
+										<div class="col-md-6">
+											<input placeholder="Phone number" name="phonenumber" type="text" value="">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="flex">
+												<textarea placeholder="Message" name="comment" rows="3" required></textarea>
+											</div>
+										</div>
+									</div>
+									<button name="submit" type="submit">Send</button>
+								</form>
+								<?php
 							} ?>
 					</div>
 				</div>

@@ -6508,7 +6508,9 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+#footer:before,
+#footer:after {
   content: " ";
   display: table;
 }
@@ -6526,7 +6528,8 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+#footer:after {
   clear: both;
 }
 .center-block {
@@ -6800,6 +6803,10 @@ html {
   display: inline;
   line-height: 47px;
   vertical-align: middle;
+}
+.cd-scrolling-bg {
+  background-color: #ffffff;
+  color: #101d42;
 }
 .section {
   /*     height: 100%; */
@@ -7186,12 +7193,43 @@ section.intro-section h1 {
 #contact .contact-social-link {
   margin: 40px 0;
 }
+#contact .contact-social-link img {
+  vertical-align: top;
+}
+#contact .contact-social-link .fb-like {
+  top: -5px;
+}
 #footer {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  font-weight: 100;
   min-height: 100px;
   /* 	font-family:@font-family-sans-serif; */
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   color: white;
   background-color: #101d42;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  #footer {
+    border-radius: 4px;
+  }
+}
+#footer .navbar-logo {
+  /* 	hide logo until scrolled down */
+  display: none;
+}
+#footer a {
+  color: #89d2dc;
+}
+#footer a:active {
+  color: #2f909d;
+}
+#footer a:focus {
+  border-bottom-width: 1px;
+  border-bottom-color: #89d2dc;
 }
 #footer .circle {
   width: 50px;
@@ -7226,13 +7264,6 @@ section.intro-section h1 {
 #footer .circle.linkedin:hover {
   background: #2585B7;
 }
-.cd-scrolling-bg.cd-color-2,
-.cd-scrolling-bg.cd-color-4,
-.cd-scrolling-bg.cd-color-6,
-.cd-scrolling-bg.cd-color-8 {
-  background-color: #ffffff;
-  color: #101d42;
-}
 .cd-fixed-bg.cd-bg-1 {
   background-image: url("/imgs/bgs/BALTOPHOTOblurredlayer.jpg");
 }
@@ -7244,5 +7275,8 @@ section.intro-section h1 {
 }
 .cd-fixed-bg.cd-bg-4 {
   background-image: url("http://placehold.it/350x250?text=img4");
+}
+.cd-fixed-bg.cd-bg-5 {
+  background-image: url("http://placehold.it/350x250?text=img5");
 }
 /*# sourceMappingURL=executivewelcome.map */
