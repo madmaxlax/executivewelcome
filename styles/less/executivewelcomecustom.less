@@ -58,9 +58,11 @@ body, html {
 }
 .navbar-header {
 	text-align: center;
-	float: left;
-	width: 100%;
 	white-space: nowrap;
+	@media only screen and (min-width: @screen-sm-max){
+    float: left;
+    width: 100%;
+	}
 }
 
 .navbar-brand {
@@ -98,6 +100,10 @@ body, html {
 		/* 	hide logo until scrolled down */
 			display:none;
 		}
+	}
+	
+	@media (min-width: @screen-lg-min){
+		letter-spacing: 2px;
 	}
 }
 /*change bootstrap nav aspects*/
@@ -192,7 +198,6 @@ ul.nav {
 	/* 		left: 0; */
 	color: white;
 	@media (min-width: @screen-lg-min){
-		letter-spacing: 2px;
 		display:inline-block;
 		width:auto;
 	}

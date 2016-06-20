@@ -6799,9 +6799,13 @@ html {
 }
 .navbar-header {
   text-align: center;
-  float: left;
-  width: 100%;
   white-space: nowrap;
+}
+@media only screen and (min-width: 991px) {
+  .navbar-header {
+    float: left;
+    width: 100%;
+  }
 }
 .navbar-brand {
   float: none;
@@ -6837,6 +6841,11 @@ html {
 .navbar:not(.top-nav-collapse) .navbar-logo {
   /* 	hide logo until scrolled down */
   display: none;
+}
+@media (min-width: 1200px) {
+  .navbar {
+    letter-spacing: 2px;
+  }
 }
 /*change bootstrap nav aspects*/
 .nav > li > a:hover,
@@ -6911,7 +6920,6 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
 }
 @media (min-width: 1200px) {
   .top-nav-collapse {
-    letter-spacing: 2px;
     display: inline-block;
     width: auto;
   }
@@ -7279,6 +7287,11 @@ section.intro-section h1 {
 #footer:not(.top-nav-collapse) .navbar-logo {
   /* 	hide logo until scrolled down */
   display: none;
+}
+@media (min-width: 1200px) {
+  #footer {
+    letter-spacing: 2px;
+  }
 }
 #footer a {
   color: #89d2dc;
