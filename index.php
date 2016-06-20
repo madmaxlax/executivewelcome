@@ -52,13 +52,13 @@
 		<div class="container">
 			<div class="navbar-header page-scroll">
 				<!-- 	the nav bar when collapsed for narrow screens  -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex1-collapse">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="#page-top">
+				<a class="navbar-brand page-scroll" href="#intro">
 					<p>
 						EXECUTIVE
 					</p>
@@ -69,7 +69,7 @@
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<div class="collapse navbar-collapse" id="navbar-ex1-collapse">
 				<ul class="nav nav-pills nav-justified nav-justified-narrow">
 					<!-- Hidden li included to remove active class from about link when scrolled up past about section
 					<li class="hidden">
@@ -86,7 +86,7 @@
 						<a class="page-scroll" href="#services">Services</a>
 					</li>
 					<li class="navbar-logo">
-						<a href="#">
+						<a href="#intro" class="page-scroll" >
 							<p>
 								<span class="hidden-sm hidden-md"> EXECUTIVE</span>
 								<img src="./imgs/logo-only_inverted-.png" alt="E W logo">
@@ -338,7 +338,7 @@
 							</div>
 							<?php
 							}
-							else {
+							else {//if no result from a contact form, display the full form 
 						?>
 								<form method="post" action="contactsend.php" id="contactformpage">
 									<!-- form format courtesy of @mildrenben http://codepen.io/mildrenben/pen/raqJvy -->
