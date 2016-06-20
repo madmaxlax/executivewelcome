@@ -395,8 +395,9 @@
 							</div>-->
 							<img src="imgs/linkedin_icon.svg" height="22px" alt=""> LinkedIn
 						</a>
-						<br>Copyright © 2009-2016 <a href="http://executivewelcomebaltimore.com">Susie Chisolm</a>
-						<br>Site by <a href="http://madmaxlax.com" target="_blank">Max Struever</a> and design by <a href="http://alexakaminsky.com" target="_blank">Alexa Kaminsky</a>
+						<br>Copyright © 2009-2016 <a href="http://executivewelcomebaltimore.com">Susie Chisolm</a>.
+						<br>Baltimore photos courtesy of <a href="https://www.facebook.com/Ron-Solomon-Photography-196634677023366/" target="_blank">Ron Solomon</a>.
+						<br>Site by <a href="http://madmaxlax.com" target="_blank">Max Struever</a> and design by <a href="http://alexakaminsky.com" target="_blank">Alexa Kaminsky</a>.
 					</div>
 				</div>
 			</div>

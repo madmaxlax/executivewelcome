@@ -3,7 +3,9 @@
 //check if the necessary data was sent
 if (isset($_REQUEST['name']) && isset($_REQUEST['emailaddress']) && isset($_REQUEST['comment']) && $_REQUEST['name'] !='' && $_REQUEST['emailaddress'] !='' && $_REQUEST['comment'] !='')
 {
-	require_once "Mail.php";
+	//requiring not necessary in php7
+	//require_once "Mail.php";
+	
 	//change back to include mom's email address as well
 		//$to      = 'susiechisolm@gmail.com,maxstruever@gmail.com';
 		$to      = 'maxstruever@gmail.com';
