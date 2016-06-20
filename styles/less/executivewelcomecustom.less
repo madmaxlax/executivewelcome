@@ -29,7 +29,8 @@
 
 /* vars */
 @execwelcome-text:black;
-@stickynav-height-padding: 129px;
+@stickynav-height-padding: 125px;
+@stickynav-height-padding-sm: 49px;
 @execwelcome-logo-width: 618px;
 @execwelcome-text-color: @navbar-default-bg;
 @execwelcome-section-bg:  #ffffff;
@@ -51,10 +52,18 @@ body, html {
 }
 
 .navbar-header {
-    float: left;
     text-align: center;
+	@media only screen and (min-width: @screen-sm-max){
+    float: left;
     width: 100%;
+	}
 }
+/* ul.nav>li
+{
+	@media (max-width: @screen-sm-min){
+		width:100%;	
+	}
+} */
 .navbar-brand {
   float:none;
   height: auto;
@@ -66,6 +75,18 @@ body, html {
     line-height: 47px;
     vertical-align: middle;
   }
+	
+	@media only screen and (max-width: @screen-sm-min){
+		padding:0;
+		font-size:30px;
+		img
+		{
+			display:none;
+		}
+	}
+	@media only screen and (max-width: @screen-xs-min){
+		font-size:18px;	
+	}
 }
 
 .cd-scrolling-bg{
@@ -76,6 +97,10 @@ body, html {
 /*     height: 100%; */
 	/*needed for sticky nav */
     padding-top: @stickynav-height-padding;
+		@media only screen and (max-width: @screen-sm-min){
+			padding-top: @stickynav-height-padding-sm;
+		}
+	
     text-align: center;
     font-size:18px;
     ul
@@ -130,14 +155,23 @@ body, html {
   }
 }
 
+.nav-justified {
+  @media (min-width: @screen-sm-min) {
+    > li {
+			white-space: nowrap;
+		}
+	}
+}
 
 ul.nav {
   text-align: center;
   padding-bottom: 10px;
   li {
-    width: auto;
-    display: inline-block;
-    margin: 0 4px;
+		@media only screen and (min-width: @screen-md-max){
+			width: auto;
+			display: inline-block;
+			margin: 0 4px;
+		}
     a {
       border-bottom: 2px solid transparent;
       padding-bottom: 5px;
@@ -175,6 +209,7 @@ ul.nav {
 }
 
 .top-nav-collapse {
+	@media only screen and (min-width: @screen-sm-max){
   padding: 5px 0;
   .nav {
     padding-bottom: 7px;
@@ -189,8 +224,9 @@ ul.nav {
 		letter-spacing: 2px;
 	}
 	.navbar-brand {
-	/* 	hide big logo when scrolled down */
+		/* 	hide big logo when scrolled down */
 		display:none;
+	}
 	}
 }
 
@@ -204,7 +240,7 @@ ul.nav {
 	li {
 		padding: 20px 0 0 0;
 	}
-	@media (max-width: @screen-sm-min){
+	@media only screen and (max-width: @screen-sm-min){
 		.sectionhr-header{
 			line-height:initial;
 		}
@@ -225,13 +261,13 @@ section.intro-section
 		text-shadow: 0 2px 4px rgba(0, 0, 0, .8);
 		line-height:2em;
 		font-weight: 300;
-        /*make it fit the width of the logo when in fuller screens*/
+    /*make it fit the width of the logo when in fuller screens*/
 		@media only screen and (min-width: @screen-sm-min) {
 			max-width: @execwelcome-logo-width;
 		}
 		/*make it a smaller font when on a phone*/
 		
-		@media only screen and (max-width: @screen-sm-min) {
+		@media only screen and (max-width: @screen-xs-min) {
 			font-size: 28px;
 			line-height:1.5em;
 		}
@@ -278,8 +314,13 @@ section.intro-section
   height: 100%;
   position: relative;
   z-index: 1;
-/* 	needed for sticky nav */
+	
+	/* 	needed for sticky nav */
   padding-top: @stickynav-height-padding;
+	/* 	needed for sticky nav when sm*/
+	@media only screen and (max-width: @screen-sm-min){
+		padding-top: @stickynav-height-padding-sm;
+	}
 	
 }
 .cd-container {
