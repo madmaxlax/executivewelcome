@@ -4079,6 +4079,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav-tabs.nav-justified {
   width: 100%;
+  /*   @media (min-width: @screen-sm-min) { */
+  /* 	} */
   border-bottom: 0;
 }
 .nav-tabs.nav-justified > li {
@@ -4101,10 +4103,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
-  .nav-tabs.nav-justified > li {
-    white-space: nowrap;
-  }
+.nav-tabs.nav-justified > li {
+  white-space: nowrap;
 }
 .nav-tabs.nav-justified > li > a {
   margin-right: 0;
@@ -6792,21 +6792,17 @@ html {
 * {
   transition: all .2s;
 }
-.navbar-header {
-  text-align: center;
-}
-@media only screen and (min-width: 991px) {
+@media (max-width: 767px) {
   .navbar-header {
-    float: left;
-    width: 100%;
+    margin: 0;
   }
 }
-/* ul.nav>li
-{
-	@media (max-width: @screen-sm-min){
-		width:100%;	
-	}
-} */
+.navbar-header {
+  text-align: center;
+  float: left;
+  width: 100%;
+  white-space: nowrap;
+}
 .navbar-brand {
   float: none;
   height: auto;
@@ -6819,8 +6815,9 @@ html {
   line-height: 47px;
   vertical-align: middle;
 }
-@media only screen and (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar-brand {
+    margin-right: -60px;
     padding: 0;
     font-size: 30px;
   }
@@ -6828,36 +6825,16 @@ html {
     display: none;
   }
 }
-@media only screen and (max-width: 480px) {
+@media (max-width: 767px) {
   .navbar-brand {
     font-size: 18px;
   }
-}
-.cd-scrolling-bg {
-  background-color: #ffffff;
-  color: #101d42;
-}
-.section {
-  /*     height: 100%; */
-  /*needed for sticky nav */
-  padding-top: 125px;
-  text-align: center;
-  font-size: 18px;
-}
-@media only screen and (max-width: 768px) {
-  .section {
-    padding-top: 49px;
-  }
-}
-.section ul {
-  list-style-position: inside;
-  line-height: 2em;
 }
 .navbar {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 100;
 }
-.navbar .navbar-logo {
+.navbar:not(.top-nav-collapse) .navbar-logo {
   /* 	hide logo until scrolled down */
   display: none;
 }
@@ -6877,24 +6854,24 @@ html {
   border: none;
   border-bottom: 2px solid #89d2dc;
 }
-@media (min-width: 768px) {
-  .nav-justified > li {
-    white-space: nowrap;
-  }
+.nav-justified {
+  /*   @media (min-width: @screen-sm-min) { */
+  /* 	} */
+}
+.nav-justified > li {
+  white-space: nowrap;
 }
 ul.nav {
   text-align: center;
   padding-bottom: 10px;
 }
 ul.nav li {
+  /* 		@media (min-width: @screen-lg-min){
+			width: auto;
+			display: inline-block;
+			margin: 0 4px;
+		} */
   /* 	  active needed for scroll spy  */
-}
-@media only screen and (min-width: 1199px) {
-  ul.nav li {
-    width: auto;
-    display: inline-block;
-    margin: 0 4px;
-  }
 }
 ul.nav li a {
   border-bottom: 2px solid transparent;
@@ -6911,9 +6888,9 @@ ul.nav li:first-child {
 ul.nav li:last-child {
   margin-right: 0;
 }
-ul.nav li.active > a,
-ul.nav li.active > a:hover,
-ul.nav li.active > a:focus {
+ul.nav li.active:not(.navbar-logo) > a,
+ul.nav li.active:not(.navbar-logo) > a:hover,
+ul.nav li.active:not(.navbar-logo) > a:focus {
   color: #89d2dc;
   border-bottom: 2px solid #89d2dc;
   /*       background-color: transparent; */
@@ -6927,26 +6904,56 @@ ul.nav li.active > a:focus {
 .nav-justified-narrow a {
   color: white;
 }
-@media only screen and (min-width: 991px) {
+.top-nav-collapse {
+  /* 		position: absolute; */
+  /* 		left: 0; */
+  color: white;
+}
+@media (min-width: 1200px) {
+  .top-nav-collapse {
+    letter-spacing: 2px;
+    display: inline-block;
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
   .top-nav-collapse {
     padding: 5px 0;
   }
   .top-nav-collapse .nav {
     padding-bottom: 7px;
   }
-  .top-nav-collapse .navbar-logo {
-    /* 	hide small logo until scrolled down */
-    display: inline-block;
-    width: auto;
-    /* 		position: absolute; */
-    /* 		left: 0; */
-    color: white;
-    letter-spacing: 2px;
-  }
   .top-nav-collapse .navbar-brand {
     /* 	hide big logo when scrolled down */
     display: none;
   }
+}
+@media (min-width: 768px) {
+  .top-nav-collapse .navbar-logo {
+    /* 	hide small logo until scrolled down */
+    display: table-cell;
+    width: 1%;
+  }
+}
+.cd-scrolling-bg {
+  background-color: #ffffff;
+  color: #101d42;
+}
+.section {
+  /*     height: 100%; */
+  /*needed for sticky nav */
+  padding-top: 125px;
+  text-align: center;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .section {
+    padding-top: 49px;
+  }
+}
+.section ul {
+  list-style-position: inside;
+  line-height: 2em;
 }
 .cd-main-content p::selection,
 .cd-main-content p::-moz-selection {
@@ -6957,7 +6964,7 @@ ul.nav li.active > a:focus {
 #services li {
   padding: 20px 0 0 0;
 }
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   #services .sectionhr-header {
     line-height: initial;
   }
@@ -6976,12 +6983,12 @@ section.intro-section h1 {
   /*make it fit the width of the logo when in fuller screens*/
   /*make it a smaller font when on a phone*/
 }
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   section.intro-section h1 {
     max-width: 618px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
   section.intro-section h1 {
     font-size: 28px;
     line-height: 1.5em;
@@ -7023,7 +7030,7 @@ section.intro-section h1 {
   padding-top: 125px;
   /* 	needed for sticky nav when sm*/
 }
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .cd-main-content {
     padding-top: 49px;
   }
@@ -7076,12 +7083,12 @@ section.intro-section h1 {
   -o-background-size: cover;
   background-size: cover;
 }
-@media only screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .cd-fixed-bg {
     background-attachment: fixed;
   }
 }
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .cd-fixed-bg h1,
   .cd-fixed-bg h2 {
     font-size: 48px;
@@ -7269,7 +7276,7 @@ section.intro-section h1 {
     border-radius: 4px;
   }
 }
-#footer .navbar-logo {
+#footer:not(.top-nav-collapse) .navbar-logo {
   /* 	hide logo until scrolled down */
   display: none;
 }

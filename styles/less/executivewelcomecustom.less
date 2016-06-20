@@ -52,18 +52,17 @@ body, html {
 }
 
 .navbar-header {
-    text-align: center;
-	@media only screen and (min-width: @screen-sm-max){
-    float: left;
-    width: 100%;
+	@media (max-width: @screen-xs-max){
+		margin:0;
 	}
 }
-/* ul.nav>li
-{
-	@media (max-width: @screen-sm-min){
-		width:100%;	
-	}
-} */
+.navbar-header {
+	text-align: center;
+	float: left;
+	width: 100%;
+	white-space: nowrap;
+}
+
 .navbar-brand {
   float:none;
   height: auto;
@@ -76,7 +75,8 @@ body, html {
     vertical-align: middle;
   }
 	
-	@media only screen and (max-width: @screen-sm-min){
+	@media (max-width: @screen-xs-max){
+		margin-right:-60px; //compensate for the button
 		padding:0;
 		font-size:30px;
 		img
@@ -84,41 +84,20 @@ body, html {
 			display:none;
 		}
 	}
-	@media only screen and (max-width: @screen-xs-min){
+	@media (max-width: @screen-xs-max){
 		font-size:18px;	
 	}
 }
 
-.cd-scrolling-bg{
-  background-color: @execwelcome-section-bg;
-  color: @execwelcome-text-color;
-}
-.section {
-/*     height: 100%; */
-	/*needed for sticky nav */
-    padding-top: @stickynav-height-padding;
-		@media only screen and (max-width: @screen-sm-min){
-			padding-top: @stickynav-height-padding-sm;
-		}
-	
-    text-align: center;
-    font-size:18px;
-    ul
-    {
-        list-style-position: inside;
-        line-height: 2em;
-        li
-        {
-        }
-    }
-}
 .navbar{
 	font-family: @headings-font-family;
 	font-weight:100;
-	.navbar-logo
-	{
-	/* 	hide logo until scrolled down */
-		display:none;
+	&:not(.top-nav-collapse){
+		.navbar-logo
+		{
+		/* 	hide logo until scrolled down */
+			display:none;
+		}
 	}
 }
 /*change bootstrap nav aspects*/
@@ -156,22 +135,22 @@ body, html {
 }
 
 .nav-justified {
-  @media (min-width: @screen-sm-min) {
+/*   @media (min-width: @screen-sm-min) { */
     > li {
 			white-space: nowrap;
 		}
-	}
+/* 	} */
 }
 
 ul.nav {
   text-align: center;
   padding-bottom: 10px;
   li {
-		@media only screen and (min-width: @screen-md-max){
+/* 		@media (min-width: @screen-lg-min){
 			width: auto;
 			display: inline-block;
 			margin: 0 4px;
-		}
+		} */
     a {
       border-bottom: 2px solid transparent;
       padding-bottom: 5px;
@@ -188,9 +167,9 @@ ul.nav {
       margin-right: 0;
     }
 /* 	  active needed for scroll spy  */
-    &.active > a,
-    &.active > a:hover,
-    &.active > a:focus {
+    &.active:not(.navbar-logo) > a,
+    &.active:not(.navbar-logo) > a:hover,
+    &.active:not(.navbar-logo) > a:focus {
       color: @execwelcome-nav-active-hover;
       border-bottom: 2px solid @execwelcome-nav-active-hover;
 /*       background-color: transparent; */
@@ -208,28 +187,57 @@ ul.nav {
   }
 }
 
-.top-nav-collapse {
-	@media only screen and (min-width: @screen-sm-max){
-  padding: 5px 0;
-  .nav {
-    padding-bottom: 7px;
-  }
-	.navbar-logo {
-	/* 	hide small logo until scrolled down */
-		display: inline-block;
-		width: auto;
-/* 		position: absolute; */
-/* 		left: 0; */
-		color: white;
+.top-nav-collapse {	
+	/* 		position: absolute; */
+	/* 		left: 0; */
+	color: white;
+	@media (min-width: @screen-lg-min){
 		letter-spacing: 2px;
+		display:inline-block;
+		width:auto;
 	}
-	.navbar-brand {
-		/* 	hide big logo when scrolled down */
-		display:none;
+	@media (min-width: @screen-sm-min){
+		padding: 5px 0;
+		.nav {
+			padding-bottom: 7px;
+		}
+		.navbar-brand {
+			/* 	hide big logo when scrolled down */
+			display:none;
+		}
 	}
+	.navbar-logo {
+		@media (min-width: @screen-sm-min) {
+			/* 	hide small logo until scrolled down */
+			display: table-cell; //actually just hide it permanently 
+			width: 1%;
+		}
 	}
 }
 
+.cd-scrolling-bg{
+  background-color: @execwelcome-section-bg;
+  color: @execwelcome-text-color;
+}
+.section {
+/*     height: 100%; */
+	/*needed for sticky nav */
+    padding-top: @stickynav-height-padding;
+		@media (max-width: @screen-sm-min){
+			padding-top: @stickynav-height-padding-sm;
+		}
+	
+    text-align: center;
+    font-size:18px;
+    ul
+    {
+        list-style-position: inside;
+        line-height: 2em;
+        li
+        {
+        }
+    }
+}
 .cd-main-content p::selection,.cd-main-content p::-moz-selection
 {
 	color: white;
@@ -240,7 +248,7 @@ ul.nav {
 	li {
 		padding: 20px 0 0 0;
 	}
-	@media only screen and (max-width: @screen-sm-min){
+	@media (max-width: @screen-sm-min){
 		.sectionhr-header{
 			line-height:initial;
 		}
@@ -262,12 +270,12 @@ section.intro-section
 		line-height:2em;
 		font-weight: 300;
     /*make it fit the width of the logo when in fuller screens*/
-		@media only screen and (min-width: @screen-sm-min) {
+		@media (min-width: @screen-sm-min) {
 			max-width: @execwelcome-logo-width;
 		}
 		/*make it a smaller font when on a phone*/
 		
-		@media only screen and (max-width: @screen-xs-min) {
+		@media (max-width: @screen-xs-min) {
 			font-size: 28px;
 			line-height:1.5em;
 		}
@@ -318,7 +326,7 @@ section.intro-section
 	/* 	needed for sticky nav */
   padding-top: @stickynav-height-padding;
 	/* 	needed for sticky nav when sm*/
-	@media only screen and (max-width: @screen-sm-min){
+	@media (max-width: @screen-sm-min){
 		padding-top: @stickynav-height-padding-sm;
 	}
 	
@@ -371,12 +379,12 @@ section.intro-section
     -o-background-size: cover;
     background-size: cover;
 }
-@media only screen and (min-width: @screen-md-min) {
+@media (min-width: @screen-md-min) {
     .cd-fixed-bg {
         background-attachment: fixed;
     }
 }
-@media only screen and (min-width: @screen-sm-min) {
+@media (min-width: @screen-sm-min) {
 
   .cd-fixed-bg h1, .cd-fixed-bg h2 {
     font-size: 48px;

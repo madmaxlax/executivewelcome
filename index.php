@@ -76,6 +76,15 @@
 						<a class="page-scroll" href="#page-top"></a>
 					</li>
 					 -->
+					<li class="navbar-logo hidden-xs">
+						<a href="#intro" class="page-scroll" >
+							<p>
+								<span class="hidden-sm hidden-md"> EXECUTIVE</span>
+								<img src="./imgs/logo-only_inverted-.png" alt="E W logo">
+								<span class="hidden-sm hidden-md"> WELCOME</span>
+							</p>
+						</a>
+					</li>
 					<li>
 						<a class="page-scroll" href="#intro">Home</a>
 					</li>
@@ -84,15 +93,6 @@
 					</li>
 					<li>
 						<a class="page-scroll" href="#services">Services</a>
-					</li>
-					<li class="navbar-logo">
-						<a href="#intro" class="page-scroll" >
-							<p>
-								<span class="hidden-sm hidden-md"> EXECUTIVE</span>
-								<img src="./imgs/logo-only_inverted-.png" alt="E W logo">
-								<span class="hidden-sm hidden-md"> WELCOME</span>
-							</p>
-						</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="#testimonials">Testimonials</a>
