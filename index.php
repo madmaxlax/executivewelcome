@@ -15,12 +15,11 @@
 
 	<!-- Bootstrap Core Less -->
 	<!-- 	<link rel="stylesheet" type="text/css" href="./styles/less/bootstrap.less" /> only use compiled now -->
-	<link rel="stylesheet" type="text/css" href="./styles/executivewelcome.css">
+	<link rel="stylesheet" type="text/css" href="./styles/executivewelcome.min.css">
 	<!-- 	open sans and lora fonts  -->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:100,400,300,600,700,900" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Lora:400,300,700" rel="stylesheet" type="text/css">
 	<!-- Custom CSS -->
-	<link rel="stylesheet/less" type="text/css" href="./styles/less/executivewelcomecustom.less" />
 
 	<!--jquery js -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
@@ -396,7 +395,7 @@
 							<img src="imgs/linkedin_icon.svg" height="22px" alt=""> LinkedIn
 						</a>
 						<br>Copyright © 2009-2016 <a href="http://executivewelcomebaltimore.com">Susie Chisolm</a>.
-						<br>Baltimore photos courtesy of <a href="https://www.facebook.com/Ron-Solomon-Photography-196634677023366/" target="_blank">Ron Solomon</a>.
+						<br>Baltimore photos courtesy of <a href="http://www.ronsolomonphoto.com/" target="_blank">Ron Solomon</a>.
 						<br>Site by <a href="http://madmaxlax.com" target="_blank">Max Struever</a> and design by <a href="http://alexakaminsky.com" target="_blank">Alexa Kaminsky</a>.
 					</div>
 				</div>

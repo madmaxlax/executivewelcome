@@ -6941,6 +6941,7 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
     /* 	hide small logo until scrolled down */
     display: table-cell;
     width: 1%;
+    font-weight: bolder;
   }
 }
 .cd-scrolling-bg {
