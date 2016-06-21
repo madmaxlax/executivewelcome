@@ -21,12 +21,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Lora:400,300,700" rel="stylesheet" type="text/css">
 	<!-- Custom CSS -->
 
-	<!--jquery js -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-	<!--bootstrap js -->
-	<script src="./js/bootstrap.min.js"></script>
-	<!--custom js -->
-	<script src="./js/executivewelcomecustom.js"></script>
+	
 
 </head>
 
@@ -402,6 +397,12 @@
 			</div>
 		</section>
 	</div>
+<!--jquery js -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<!--bootstrap js -->
+	<script src="./js/bootstrap.min.js"></script>
+	<!--custom js -->
+	<script src="./js/executivewelcomecustom.js"></script>
 </body>
 
 </html>
