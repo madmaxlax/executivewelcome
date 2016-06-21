@@ -6790,7 +6790,7 @@ html {
   height: 100%;
 }
 * {
-  transition: all .1s;
+  transition: all 0.5s ease-in-out, top 0s, left 0s, width 0s, height 0s;
 }
 .navbar-header {
   text-align: center;
@@ -6801,7 +6801,7 @@ html {
     margin: 0;
   }
 }
-@media only screen and (min-width: 991px) {
+@media (min-width: 768px) {
   .navbar-header {
     float: left;
     width: 100%;
@@ -6823,13 +6823,13 @@ html {
   .navbar-brand {
     margin-right: -60px;
     padding: 0;
-    font-size: 30px;
+    font-size: 28px;
   }
   .navbar-brand img {
     display: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .navbar-brand {
     font-size: 18px;
   }
@@ -6914,8 +6914,6 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
   color: white;
 }
 .top-nav-collapse {
-  /* 		position: absolute; */
-  /* 		left: 0; */
   color: white;
 }
 @media (min-width: 1200px) {
@@ -6951,11 +6949,15 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
 .section {
   /*     height: 100%; */
   /*needed for sticky nav */
-  padding-top: 125px;
   text-align: center;
   font-size: 18px;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .section {
+    padding-top: 125px;
+  }
+}
+@media (max-width: 767px) {
   .section {
     padding-top: 49px;
   }
@@ -6981,11 +6983,15 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
   height: 100%;
   position: relative;
   z-index: 1;
-  /* 	needed for sticky nav */
-  padding-top: 125px;
   /* 	needed for sticky nav when sm*/
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .cd-main-content {
+    /* 	needed for sticky nav */
+    padding-top: 125px;
+  }
+}
+@media (max-width: 767px) {
   .cd-main-content {
     padding-top: 49px;
   }
@@ -7038,17 +7044,9 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
   -o-background-size: cover;
   background-size: cover;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .cd-fixed-bg {
     background-attachment: fixed;
-  }
-}
-@media (min-width: 768px) {
-  .cd-fixed-bg h1,
-  .cd-fixed-bg h2 {
-    font-size: 48px;
-    /* 		padding-bottom:100px; */
-    font-weight: 300;
   }
 }
 .cd-scrolling-bg {
@@ -7091,7 +7089,7 @@ section.intro-section h1 {
     max-width: 618px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   section.intro-section h1 {
     font-size: 28px;
     line-height: 1.5em;
@@ -7101,7 +7099,7 @@ section.intro-section h1 {
   padding: 20px 0 0 0;
   list-style: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #services .sectionhr-header {
     line-height: initial;
   }

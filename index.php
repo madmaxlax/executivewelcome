@@ -281,7 +281,7 @@
 					<div class="col-lg-4 col-sm-6">
 						<ul>
 							<li>Posts from our
-								<a href="https://www.facebook.com/Executive-Welcome-161256610565493/">
+								<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
 									<img src="imgs/f_icon.svg" height="18px" alt=""> Facebook
 								</a> page</li>
 							<ul>
@@ -289,7 +289,7 @@
 								<li>Post</li>
 								<li>Post</li>
 								<li>
-									<a href="https://www.facebook.com/Executive-Welcome-161256610565493/">
+									<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
 									See more...
 									</a>
 								</li>
@@ -313,13 +313,13 @@
 						<br/>
 						<h2 class="section-subhead">Would you like to know more? Please feel free to reach out to us!</h2>
 						<div class="contact-social-link">
-							<a href="https://www.facebook.com/Executive-Welcome-161256610565493/">
+							<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
 								<img src="imgs/f_icon.svg" height="22px" alt=""> Executive Welcome on Facebook
 							</a>
 							<div class="fb-like" data-href="https://www.facebook.com/Executive-Welcome-161256610565493/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 						</div>
 						<div class="contact-social-link">
-							<a href="https://www.linkedin.com/in/susie-chisolm-29843617">
+							<a href="https://www.linkedin.com/in/susie-chisolm-29843617" target="_blank">
 								<img src="imgs/linkedin_icon.svg" height="22px" alt=""> Susie Chisolm on LinkedIn
 							</a>
 						</div>

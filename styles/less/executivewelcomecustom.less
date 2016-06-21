@@ -22,7 +22,12 @@
 @nav-tabs-active-link-hover-color: @execwelcome-nav-active-hover-bg;
 
 @font-size-navbar-brand:  50px;
+@font-size-navbar-brand-sm:  28px;
+@font-size-navbar-brand-xs:  18px;
+@font-size-intro: 40px;
+@font-size-intro-sm: @font-size-navbar-brand-sm;
 @font-size-navbar-pills:  18px;
+@font-size-section:18px;
 
 @nav-pills-border-radius: @border-radius-pills;
 @nav-pills-active-link-hover-bg: @execwelcome-nav-active-hover-bg;
@@ -41,13 +46,14 @@
 @testimonial-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 12px rgba(82, 168, 236, 0.6);
 
 
+
 body, html {
   /* important */
   height: 100%;
 }
 
 * {
-	transition: all .1s;
+	transition: all .5s ease-in-out, top 0s, left 0s, width 0s, height 0s;
 }
 
 .navbar-header {
@@ -56,7 +62,7 @@ body, html {
 	@media (max-width: @screen-xs-max){
 		margin:0;
 	}
-	@media only screen and (min-width: @screen-sm-max){
+	@media (min-width: @screen-sm-min){
     float: left;
     width: 100%;
 	}
@@ -77,14 +83,14 @@ body, html {
 	@media (max-width: @screen-xs-max){
 		margin-right:-60px; //compensate for the button
 		padding:0;
-		font-size:30px;
+		font-size:@font-size-navbar-brand-sm;
 		img
 		{
 			display:none;
 		}
 	}
-	@media (max-width: @screen-xs-max){
-		font-size:18px;	
+	@media (max-width: @screen-xs-min){
+		font-size:@font-size-navbar-brand-xs;	
 	}
 }
 
@@ -191,8 +197,6 @@ ul.nav {
 }
 
 .top-nav-collapse {	
-	/* 		position: absolute; */
-	/* 		left: 0; */
 	color: white;
 	@media (min-width: @screen-lg-min){
 		display:inline-block;
@@ -225,21 +229,22 @@ ul.nav {
 .section {
 /*     height: 100%; */
 	/*needed for sticky nav */
-    padding-top: @stickynav-height-padding;
-		@media (max-width: @screen-sm-min){
-			padding-top: @stickynav-height-padding-sm;
-		}
-	
-    text-align: center;
-    font-size:18px;
-    ul
-    {
-        list-style-position: inside;
-        line-height: 2em;
-        li
-        {
-        }
-    }
+	@media (min-width: @screen-sm-min){
+  	padding-top: @stickynav-height-padding;
+	}
+	@media (max-width: @screen-xs-max){
+		padding-top: @stickynav-height-padding-sm;
+	}
+	text-align: center;
+	font-size:@font-size-section;
+	ul
+	{
+			list-style-position: inside;
+			line-height: 2em;
+			li
+			{
+			}
+	}
 }
 .cd-main-content p::selection,.cd-main-content p::-moz-selection
 {
@@ -262,10 +267,12 @@ ul.nav {
   position: relative;
   z-index: 1;
 	
-	/* 	needed for sticky nav */
-  padding-top: @stickynav-height-padding;
+	@media (min-width: @screen-sm-min){
+		/* 	needed for sticky nav */
+  	padding-top: @stickynav-height-padding;
+	}
 	/* 	needed for sticky nav when sm*/
-	@media (max-width: @screen-sm-min){
+	@media (max-width: @screen-xs-max){
 		padding-top: @stickynav-height-padding-sm;
 	}
 	
@@ -311,26 +318,18 @@ ul.nav {
 }
 
 .cd-fixed-bg {
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	@media (min-width: @screen-sm-min) {
+		background-attachment: fixed;
+	}
 }
-@media (min-width: @screen-md-min) {
-    .cd-fixed-bg {
-        background-attachment: fixed;
-    }
-}
-@media (min-width: @screen-sm-min) {
 
-  .cd-fixed-bg h1, .cd-fixed-bg h2 {
-    font-size: 48px;
-/* 		padding-bottom:100px; */
-    font-weight: 300;
-  }
-}
 .cd-scrolling-bg {
   position: relative;
 /*   min-height: 100%; */
@@ -352,7 +351,7 @@ ul.nav {
 	{
 		background:#fff; 
 		padding:0 10px;
-		font-size: 28px;
+		font-size: @font-size-navbar-brand-sm;
 		font-weight: 300;
 	}
 }
@@ -366,7 +365,7 @@ section.intro-section
 {
 	h1
 	{
-		font-size: 40px;
+		font-size: @font-size-intro;
 		text-shadow: 0 2px 4px rgba(0, 0, 0, .8);
 		line-height:2em;
 		font-weight: 300;
@@ -375,9 +374,8 @@ section.intro-section
 			max-width: @execwelcome-logo-width;
 		}
 		/*make it a smaller font when on a phone*/
-		
-		@media (max-width: @screen-xs-min) {
-			font-size: 28px;
+		@media (max-width: @screen-xs-max) {
+			font-size: @font-size-intro-sm;
 			line-height:1.5em;
 		}
 	}
@@ -388,7 +386,7 @@ section.intro-section
 		padding: 20px 0 0 0;
 		list-style: none;
 	}
-	@media (max-width: @screen-sm-min){
+	@media (max-width: @screen-xs-max){
 		.sectionhr-header{
 			line-height:initial;
 		}
@@ -414,7 +412,7 @@ section.intro-section
 		border-bottom:@testimonial-border;
 		font-family: OpenSans-Light;
 		font-weight:bolder;
-		font-size:18px;
+		font-size:@font-size-section;
 	}
 	.testimonial-company
 	{
