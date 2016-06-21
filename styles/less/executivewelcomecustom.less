@@ -47,17 +47,15 @@ body, html {
 }
 
 * {
-	transition: all .2s;
+	transition: all .1s;
 }
 
 .navbar-header {
+	text-align: center;
+	white-space: nowrap;
 	@media (max-width: @screen-xs-max){
 		margin:0;
 	}
-}
-.navbar-header {
-	text-align: center;
-	white-space: nowrap;
 	@media only screen and (min-width: @screen-sm-max){
     float: left;
     width: 100%;
@@ -249,75 +247,11 @@ ul.nav {
 	background: @navbar-default-color;
 	text-shadow: none;
 }
-#services {
-	li {
-		padding: 20px 0 0 0;
-	}
-	@media (max-width: @screen-sm-min){
-		.sectionhr-header{
-			line-height:initial;
-		}
-	}
-}
 .section ul  {
 	padding:0;
 	ul 
 	{
 		padding:0 0 0 10px;
-	}
-}
-section.intro-section
-{
-	h1
-	{
-		font-size: 40px;
-		text-shadow: 0 2px 4px rgba(0, 0, 0, .8);
-		line-height:2em;
-		font-weight: 300;
-    /*make it fit the width of the logo when in fuller screens*/
-		@media (min-width: @screen-sm-min) {
-			max-width: @execwelcome-logo-width;
-		}
-		/*make it a smaller font when on a phone*/
-		
-		@media (max-width: @screen-xs-min) {
-			font-size: 28px;
-			line-height:1.5em;
-		}
-	}
-}
-
-.testimonial-box
-{
-/* 	&:extend(.col-lg-6); extend wasnt working */
-	margin-top:2em;
-	/* margin-bottom:2em; */
-	border: @testimonial-border;
-	&:hover
-	{
-		outline: thin dotted \9;
-		-webkit-box-shadow: @testimonial-box-shadow;
-		-moz-box-shadow: @testimonial-box-shadow;
-		box-shadow: @testimonial-box-shadow;
-	
-	}
-	.testimonial-testi
-	{
-		padding: 1em;
-		border-bottom:@testimonial-border;
-		font-family: OpenSans-Light;
-		font-weight:bolder;
-		font-size:18px;
-	}
-	.testimonial-company
-	{
-		font-style:italic;
-		color:black;
-	}
-	.testimonial-quote-box
-	{
-		padding:1em;
-		font-size:16px;
 	}
 }
 
@@ -427,6 +361,74 @@ section.intro-section
 	font-size:24px;
 	font-weight:600;
 }
+
+section.intro-section
+{
+	h1
+	{
+		font-size: 40px;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, .8);
+		line-height:2em;
+		font-weight: 300;
+    /*make it fit the width of the logo when in fuller screens*/
+		@media (min-width: @screen-sm-min) {
+			max-width: @execwelcome-logo-width;
+		}
+		/*make it a smaller font when on a phone*/
+		
+		@media (max-width: @screen-xs-min) {
+			font-size: 28px;
+			line-height:1.5em;
+		}
+	}
+}
+
+#services {
+	li {
+		padding: 20px 0 0 0;
+		list-style: none;
+	}
+	@media (max-width: @screen-sm-min){
+		.sectionhr-header{
+			line-height:initial;
+		}
+	}
+}
+.testimonial-box
+{
+/* 	&:extend(.col-lg-6); extend wasnt working */
+	margin-top:2em;
+	/* margin-bottom:2em; */
+	border: @testimonial-border;
+	&:hover
+	{
+		outline: thin dotted \9;
+		-webkit-box-shadow: @testimonial-box-shadow;
+		-moz-box-shadow: @testimonial-box-shadow;
+		box-shadow: @testimonial-box-shadow;
+	
+	}
+	.testimonial-testi
+	{
+		padding: 1em;
+		border-bottom:@testimonial-border;
+		font-family: OpenSans-Light;
+		font-weight:bolder;
+		font-size:18px;
+	}
+	.testimonial-company
+	{
+		font-style:italic;
+		color:black;
+	}
+	.testimonial-quote-box
+	{
+		padding:1em;
+		font-size:16px;
+	}
+}
+
+
 .bio-image
 {
 	float:left;
