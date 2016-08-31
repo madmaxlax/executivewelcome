@@ -6838,6 +6838,10 @@ html {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 100;
 }
+.navbar .navbar-logo h1 {
+  padding: 0;
+  margin: 0;
+}
 .navbar:not(.top-nav-collapse) .navbar-logo {
   /* 	hide logo until scrolled down */
   display: none;
@@ -6846,9 +6850,23 @@ html {
   .navbar {
     letter-spacing: 2px;
   }
+  .navbar .navbar-logo .maintitle-nav {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+  .navbar .navbar-logo .maintitle-nav-executive {
+    float: left;
+  }
+  .navbar .navbar-logo .maintitle-nav-welcome {
+    float: right;
+  }
+  .navbar .navbar-logo img {
+    height: 25px;
+    margin-top: -5px;
+  }
 }
 .navbar .subtitle-nav {
-  font-size: 11px;
+  font-size: 12px;
   width: 100%;
   text-align-last: justify;
 }
@@ -6857,15 +6875,17 @@ html {
   text-align-last: justify;
   font-size: 18px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar .subtitle {
     font-size: 34px;
     padding-top: 10px;
   }
 }
 /*change bootstrap nav aspects*/
-.nav > li {
-  vertical-align: middle;
+@media (min-width: 1200px) {
+  .nav > li {
+    vertical-align: middle;
+  }
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -7303,6 +7323,10 @@ section.intro-section h1 {
     border-radius: 4px;
   }
 }
+#footer .navbar-logo h1 {
+  padding: 0;
+  margin: 0;
+}
 #footer:not(.top-nav-collapse) .navbar-logo {
   /* 	hide logo until scrolled down */
   display: none;
@@ -7311,9 +7335,23 @@ section.intro-section h1 {
   #footer {
     letter-spacing: 2px;
   }
+  #footer .navbar-logo .maintitle-nav {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+  #footer .navbar-logo .maintitle-nav-executive {
+    float: left;
+  }
+  #footer .navbar-logo .maintitle-nav-welcome {
+    float: right;
+  }
+  #footer .navbar-logo img {
+    height: 25px;
+    margin-top: -5px;
+  }
 }
 #footer .subtitle-nav {
-  font-size: 11px;
+  font-size: 12px;
   width: 100%;
   text-align-last: justify;
 }
@@ -7322,7 +7360,7 @@ section.intro-section h1 {
   text-align-last: justify;
   font-size: 18px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #footer .subtitle {
     font-size: 34px;
     padding-top: 10px;

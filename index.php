@@ -73,12 +73,12 @@
 					 -->
 					<li class="navbar-logo hidden-xs">
 						<a href="#intro" class="page-scroll" >
-							<p>
-								<span class="hidden-sm hidden-md"> EXECUTIVE</span>
+							<h1>
+								<span class="maintitle-nav maintitle-nav-executive hidden-sm hidden-md"> EXECUTIVE</span>
 								<img src="./imgs/logo-only_inverted-.png" alt="E W logo">
-								<span class="hidden-sm hidden-md"> WELCOME</span>
+								<span class="maintitle-nav maintitle-nav-welcome hidden-sm hidden-md"> WELCOME</span>
 								<div class="subtitle-nav visible-lg">Recruitment &amp; Relocation Assistance</div>
-							</p>
+							</h1>
 						</a>
 					</li>
 					<li>
