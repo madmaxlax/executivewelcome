@@ -4,7 +4,8 @@
 @font-family-sans-serif:  "Lora", Helvetica, Arial, sans-serif;
 @headings-font-family:    "Open Sans", Helvetica, Arial, sans-serif;
 @navbar-default-color: white;
-@navbar-default-bg: #101d42;
+/* @navbar-default-bg: #101d42; no more Navy */
+@navbar-default-bg: black;
 @border-radius-pills:0px;
 
 @navbar-default-link-color:                white;
@@ -34,6 +35,7 @@
 
 /* vars */
 @execwelcome-text:black;
+@execwelcome-logo-bg:white;
 @stickynav-height-padding: 125px;
 @stickynav-height-padding-sm: 49px;
 @execwelcome-logo-width: 618px;
@@ -79,12 +81,16 @@ body, html {
     line-height: 47px;
     vertical-align: middle;
   }
+	svg, img{
+		width:55px;
+		background-color:@execwelcome-logo-bg;
+	}
 	
 	@media (max-width: @screen-xs-max){
 		margin-right:-60px; //compensate for the button
 		padding:0;
 		font-size:@font-size-navbar-brand-sm;
-		img
+		svg, img
 		{
 			display:none;
 		}
@@ -100,6 +106,9 @@ body, html {
 	.navbar-logo h1{
 		padding:0;
 		margin:0;
+		svg, img{
+			background-color:@execwelcome-logo-bg;
+		}
 	}
 	&:not(.top-nav-collapse){
 		.navbar-logo
@@ -122,7 +131,7 @@ body, html {
 			.maintitle-nav-welcome{
 				float:right;
 			}
-			img{
+			svg, img{
 				height:25px;
 				margin-top:-5px;
 			}
@@ -404,16 +413,20 @@ section.intro-section
 	{
 		font-size: @font-size-intro;
 		text-shadow: 0 2px 4px rgba(0, 0, 0, .8);
-		line-height:2em;
+		line-height: 1.5em;
 		font-weight: 300;
     /*make it fit the width of the logo when in fuller screens*/
 		@media (min-width: @screen-sm-min) {
 			max-width: @execwelcome-logo-width;
+			padding: 20px;
+			background-color: rgba(0,0,0,.35);
 		}
 		/*make it a smaller font when on a phone*/
 		@media (max-width: @screen-xs-max) {
 			font-size: @font-size-intro-sm;
 			line-height:1.5em;
+			background-color: rgba(0,0,0,.35);
+			padding: 1ex;
 		}
 	}
 }
@@ -485,6 +498,10 @@ section.intro-section
 	font-color:@font-family-sans-serif;
 }
 #links {
+	.links-header{
+		text-align:left;
+		font-weight:800;
+	}
 	ul {
 		text-align:initial;
 	}
@@ -594,7 +611,7 @@ section.intro-section
 		padding: 6px;
 		width: (@width/2);
 		color: white;
-		margin: 30px 0 0 25px;
+		margin: 30px 0 0 0;
 		box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
 		&:hover { 
 			box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
@@ -675,16 +692,18 @@ section.intro-section
 }
 
 .cd-fixed-bg.cd-bg-1 {
-  background-image: url("/imgs/bgs/BALTOPHOTOblurredlayer.jpg");
+/*   background-image: url("/imgs/bgs/BALTOPHOTOblurredlayer.jpg"); */
+	  background-image: url("/imgs/bg/fedhill.jpg");
 }
 .cd-fixed-bg.cd-bg-2 {
 /*   background-image: url("http://placehold.it/350x250?text=img2"); */
-  background-image: url("/imgs/bg/fedhill.jpg");
+/*   background-image: url("/imgs/bg/fedhill.jpg"); */
+	  background-image: url("/imgs/bg/threeimgs.jpg");
 
 }
 .cd-fixed-bg.cd-bg-3 {
 /*   background-image: url("http://placehold.it/350x250?text=3-imgs-here"); */
-	  background-image: url("/imgs/bg/threeimgs.jpg");
+	  background-image: url("/imgs/bg/hyatt-innerharbor.jpg");
 }
 .cd-fixed-bg.cd-bg-4 {
 /*   background-image: url("http://placehold.it/350x250?text=img4"); */

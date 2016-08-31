@@ -4533,8 +4533,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #101d42;
-  border-color: #0a1127;
+  background-color: black;
+  border-color: #000000;
 }
 .navbar-default .navbar-brand {
   color: white;
@@ -4579,7 +4579,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #0a1127;
+  border-color: #000000;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -6782,6 +6782,7 @@ button.close {
 }
 /* grab the bootstrap less first, which grabs all other less files needed */
 /*changing bootstrap vars */
+/* @navbar-default-bg: #101d42; no more Navy */
 /* vars */
 /*testimonial-bordermonials*/
 body,
@@ -6819,12 +6820,18 @@ html {
   line-height: 47px;
   vertical-align: middle;
 }
+.navbar-brand svg,
+.navbar-brand img {
+  width: 55px;
+  background-color: white;
+}
 @media (max-width: 767px) {
   .navbar-brand {
     margin-right: -60px;
     padding: 0;
     font-size: 28px;
   }
+  .navbar-brand svg,
   .navbar-brand img {
     display: none;
   }
@@ -6841,6 +6848,10 @@ html {
 .navbar .navbar-logo h1 {
   padding: 0;
   margin: 0;
+}
+.navbar .navbar-logo h1 svg,
+.navbar .navbar-logo h1 img {
+  background-color: white;
 }
 .navbar:not(.top-nav-collapse) .navbar-logo {
   /* 	hide logo until scrolled down */
@@ -6860,6 +6871,7 @@ html {
   .navbar .navbar-logo .maintitle-nav-welcome {
     float: right;
   }
+  .navbar .navbar-logo svg,
   .navbar .navbar-logo img {
     height: 25px;
     margin-top: -5px;
@@ -6983,7 +6995,7 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
 }
 .cd-scrolling-bg {
   background-color: #ffffff;
-  color: #101d42;
+  color: black;
 }
 .section {
   /*     height: 100%; */
@@ -7101,7 +7113,7 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
 .sectionhr {
   width: 100%;
   text-align: center;
-  border-bottom: 3px solid #101d42;
+  border-bottom: 3px solid black;
   line-height: 0.1em;
   margin: 22px 0 20px;
 }
@@ -7118,7 +7130,7 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
 section.intro-section h1 {
   font-size: 40px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  line-height: 2em;
+  line-height: 1.5em;
   font-weight: 300;
   /*make it fit the width of the logo when in fuller screens*/
   /*make it a smaller font when on a phone*/
@@ -7126,12 +7138,16 @@ section.intro-section h1 {
 @media (min-width: 768px) {
   section.intro-section h1 {
     max-width: 618px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.35);
   }
 }
 @media (max-width: 767px) {
   section.intro-section h1 {
     font-size: 28px;
     line-height: 1.5em;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 1ex;
   }
 }
 #services li {
@@ -7147,7 +7163,7 @@ section.intro-section h1 {
   /* 	&:extend(.col-lg-6); extend wasnt working */
   margin-top: 2em;
   /* margin-bottom:2em; */
-  border: solid 2px #101d42;
+  border: solid 2px black;
 }
 .testimonial-box:hover {
   outline: thin dotted \9;
@@ -7157,7 +7173,7 @@ section.intro-section h1 {
 }
 .testimonial-box .testimonial-testi {
   padding: 1em;
-  border-bottom: solid 2px #101d42;
+  border-bottom: solid 2px black;
   font-family: OpenSans-Light;
   font-weight: bolder;
   font-size: 18px;
@@ -7173,7 +7189,7 @@ section.intro-section h1 {
 .bio-image {
   float: left;
   margin: 20px 10px 10px 0;
-  border: solid 1px #101d42;
+  border: solid 1px black;
 }
 .bio-header {
   text-align: left;
@@ -7187,6 +7203,10 @@ section.intro-section h1 {
   font-weight: 300;
   font-color: "Lora", Helvetica, Arial, sans-serif;
 }
+#links .links-header {
+  text-align: left;
+  font-weight: 800;
+}
 #links ul {
   text-align: initial;
 }
@@ -7196,7 +7216,7 @@ section.intro-section h1 {
   margin: 0 auto 0;
   padding: 0 0 40px;
   border-radius: 3px;
-  color: #101d42;
+  color: black;
 }
 #contact input::-webkit-input-placeholder,
 #contact textarea::-webkit-input-placeholder {
@@ -7212,8 +7232,8 @@ section.intro-section h1 {
   display: block;
   border: none;
   padding: 20px 0 10px 0;
-  border-bottom: solid 1px #101d42;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #101d42 4%);
+  border-bottom: solid 1px black;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, black 4%);
   background-position: -2000px 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -7224,7 +7244,7 @@ section.intro-section h1 {
 }
 #contact input:focus::-webkit-input-placeholder,
 #contact textarea:focus::-webkit-input-placeholder {
-  color: #101d42;
+  color: black;
 }
 #contact input:focus,
 #contact textarea:focus,
@@ -7278,18 +7298,18 @@ section.intro-section h1 {
 #contact button {
   transition: transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), box-shadow 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
   border: none;
-  background: #101d42;
+  background: black;
   cursor: pointer;
   border-radius: 3px;
   padding: 6px;
   width: 50%;
   color: white;
-  margin: 30px 0 0 25px;
+  margin: 30px 0 0 0;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
 }
 #contact button:hover {
   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
-  background: #244194;
+  background: #333333;
 }
 #contact button:active {
   background: #000000;
@@ -7315,7 +7335,7 @@ section.intro-section h1 {
   /* 	font-family:@font-family-sans-serif; */
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   color: white;
-  background-color: #101d42;
+  background-color: black;
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
@@ -7326,6 +7346,10 @@ section.intro-section h1 {
 #footer .navbar-logo h1 {
   padding: 0;
   margin: 0;
+}
+#footer .navbar-logo h1 svg,
+#footer .navbar-logo h1 img {
+  background-color: white;
 }
 #footer:not(.top-nav-collapse) .navbar-logo {
   /* 	hide logo until scrolled down */
@@ -7345,6 +7369,7 @@ section.intro-section h1 {
   #footer .navbar-logo .maintitle-nav-welcome {
     float: right;
   }
+  #footer .navbar-logo svg,
   #footer .navbar-logo img {
     height: 25px;
     margin-top: -5px;
@@ -7410,15 +7435,17 @@ section.intro-section h1 {
   background: #2585B7;
 }
 .cd-fixed-bg.cd-bg-1 {
-  background-image: url("/imgs/bgs/BALTOPHOTOblurredlayer.jpg");
+  /*   background-image: url("/imgs/bgs/BALTOPHOTOblurredlayer.jpg"); */
+  background-image: url("/imgs/bg/fedhill.jpg");
 }
 .cd-fixed-bg.cd-bg-2 {
   /*   background-image: url("http://placehold.it/350x250?text=img2"); */
-  background-image: url("/imgs/bg/fedhill.jpg");
+  /*   background-image: url("/imgs/bg/fedhill.jpg"); */
+  background-image: url("/imgs/bg/threeimgs.jpg");
 }
 .cd-fixed-bg.cd-bg-3 {
   /*   background-image: url("http://placehold.it/350x250?text=3-imgs-here"); */
-  background-image: url("/imgs/bg/threeimgs.jpg");
+  background-image: url("/imgs/bg/hyatt-innerharbor.jpg");
 }
 .cd-fixed-bg.cd-bg-4 {
   /*   background-image: url("http://placehold.it/350x250?text=img4"); */

@@ -21,7 +21,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Lora:400,300,700" rel="stylesheet" type="text/css">
 	<!-- Custom CSS -->
 
-	
+
 
 </head>
 
@@ -56,7 +56,9 @@
 					<p>
 						EXECUTIVE
 					</p>
-					<img src="./imgs/logo-only_inverted-.png" class="logo-img" alt="Executive Welcome logo">
+					<img src="./imgs/executive-welcome-logo.svg" class="logo-img" alt="Executive Welcome logo">
+<!-- 					<svg class="icon" viewBox="0 0 32 32" class="logo-img" alt="Executive Welcome logo"><use xlink:href="./imgs/executive-welcome-logo.svg"></use></svg> -->
+
 					<p>WELCOME
 					</p>
 					<div class="subtitle hidden-xs">Recruitment &amp; Relocation Assistance</div>
@@ -72,15 +74,16 @@
 					</li>
 					 -->
 					<li class="navbar-logo hidden-xs">
-						<a href="#intro" class="page-scroll" >
+						<a href="#intro" class="page-scroll">
 							<h1>
 								<span class="maintitle-nav maintitle-nav-executive hidden-sm hidden-md"> EXECUTIVE</span>
-								<img src="./imgs/logo-only_inverted-.png" alt="E W logo">
+								<img src="./imgs/executive-welcome-logo.svg"  alt="E W logo">
+<!-- 								<svg class="icon" viewBox="0 0 32 32" alt="E W Logo"><use xlink:href="./imgs/executive-welcome-logo.svg"></use></svg> -->
 								<span class="maintitle-nav maintitle-nav-welcome hidden-sm hidden-md"> WELCOME</span>
 								<div class="subtitle-nav visible-lg">Recruitment &amp; Relocation Assistance</div>
 							</h1>
 						</a>
-					</li>
+					</l>
 					<li>
 						<a class="page-scroll" href="#intro">Home</a>
 					</li>
@@ -120,10 +123,10 @@
 					<div class="col-lg-12">
 						<h1 class="sectionhr"><span class="sectionhr-header">About</span></h1>
 						<br/>
-						<h2 class="section-subhead">Trying to attract a new employee to your company? Does it mean uprooting their family to a new city? </h2>
+						<h2 class="section-subhead">Trying to attract a new employee to your company?<br/>Does it mean uprooting their family to a new city? </h2>
 						<br>
 						<p>
-							Let me show them Baltimore's attributes that will make them say 'yes'. Baltimore has wonderful things to offer, but they are not always easy to find. I will connect them to the area's best features.
+							Let us show them Baltimore's attributes that will make them say <strong>"yes."</strong><br/>Baltimore has wonderful things to offer, but they are not always easy to find. We will connect them to the area's best features.
 						</p>
 					</div>
 					<div class="col-lg-6">
@@ -251,9 +254,8 @@
 					</div>
 					<br/>
 					<div class="col-lg-4 col-sm-6">
+							<div class="links-header">Great Information About Baltimore</div>
 						<ul>
-							<li>Great Information About Baltimore</li>
-							<ul>
 								<li><a href="http://www.greaterbaltimore.org" target="_blank">Economic Alliance of Baltimore</a></li>
 								<li><a href="http://www.baltimore.org" target="_blank">Visit Baltimore!</a></li>
 								<li><a href="http://www.baltimoresun.com/entertainment/dining/bal-100-foodies-pg1202,0,5822554.photogallery " target="_blank">100 Things You Have To Eat in Baltimore</a></li>
@@ -269,34 +271,30 @@
 								<ul>
 									<li>Great lists of activities in Baltimore </li>
 								</ul>
-							</ul>
 						</ul>
 					</div>
 					<div class="col-lg-4 col-sm-6">
+						<div class="links-header">Especially for Families with Kids</div>
 						<ul>
-							<li>Especially for Families with Kids</li>
-							<ul>
-								<li><a href="http://www.Kidbaltimore.com" target="_blank">Kid Baltimore.Com</a></li>
-							</ul>
+							<li><a href="http://www.Kidbaltimore.com" target="_blank">Kid Baltimore.Com</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-4 col-sm-6">
+						<div class="links-header"> The latest posts from our
+							<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
+								<img src="imgs/f_icon.svg" height="18px" alt=""> Facebook
+							</a> page
+						</div>
 						<ul>
-							<li>Posts from our
-								<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
-									<img src="imgs/f_icon.svg" height="18px" alt=""> Facebook
-								</a> page</li>
-							<ul>
-								<li>Post</li>
-								<li>Post</li>
-								<li>Post</li>
-								<li>
-									<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
+							<li id="post1">Loading...</li>
+							<li id="post2">Loading...</li>
+							<li id="post3">Loading...</li>
+							<li id="post4">Loading...</li>
+							<li id="post5">Loading...</li>
+						</ul>
+						<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
 									See more...
 									</a>
-								</li>
-							</ul>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -388,7 +386,7 @@
 								<span class="fa fa-facebook"></span>
 							</div> -->
 							<img src="imgs/f_icon.svg" height="22px" alt=""> Facebook
-						</a> 
+						</a>
 						<a href="https://www.linkedin.com/in/susie-chisolm-29843617">
 							<!--<div class="circle linkedin">
 								<span class="fa fa-linkedin"></span>
@@ -404,7 +402,7 @@
 			</div>
 		</section>
 	</div>
-<!--jquery js -->
+	<!--jquery js -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 	<!--bootstrap js -->
 	<script src="./js/bootstrap.min.js"></script>
