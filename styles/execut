@@ -4537,7 +4537,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #0a1127;
 }
 .navbar-default .navbar-brand {
-  color: white;
+  color: #ffffff;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -4545,10 +4545,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: white;
+  color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a {
-  color: white;
+  color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -4589,7 +4589,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: white;
+    color: #ffffff;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4610,13 +4610,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default .navbar-link {
-  color: white;
+  color: #ffffff;
 }
 .navbar-default .navbar-link:hover {
   color: #89d2dc;
 }
 .navbar-default .btn-link {
-  color: white;
+  color: #ffffff;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
@@ -6849,24 +6849,12 @@ html {
 }
 .navbar .subtitle-nav {
   font-size: 11px;
-  width: 100%;
-  text-align-last: justify;
 }
 .navbar .subtitle {
-  width: 100%;
-  text-align-last: justify;
-  font-size: 18px;
-}
-@media (min-width: 992px) {
-  .navbar .subtitle {
-    font-size: 34px;
-    padding-top: 10px;
-  }
+  font-size: 35px;
+  padding-top: 10px;
 }
 /*change bootstrap nav aspects*/
-.nav > li {
-  vertical-align: middle;
-}
 .nav > li > a:hover,
 .nav > li > a:focus {
   color: #89d2dc;
@@ -6930,7 +6918,7 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
   font-size: 18px;
 }
 .nav-justified-narrow a {
-  color: white;
+  color: #ffffff;
 }
 .top-nav-collapse {
   color: white;
@@ -6988,7 +6976,7 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
 .cd-main-content p::selection,
 .cd-main-content p::-moz-selection {
   color: white;
-  background: white;
+  background: #ffffff;
   text-shadow: none;
 }
 .section ul {
@@ -7161,7 +7149,7 @@ section.intro-section h1 {
   font-weight: 300;
 }
 .bio-text {
-  color: black;
+  color: #000000;
   text-align: left;
   font-size: 16px;
   font-weight: 300;
@@ -7294,7 +7282,7 @@ section.intro-section h1 {
   min-height: 100px;
   /* 	font-family:@font-family-sans-serif; */
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  color: white;
+  color: #ffffff;
   background-color: #101d42;
   margin-bottom: 0;
 }
@@ -7314,19 +7302,10 @@ section.intro-section h1 {
 }
 #footer .subtitle-nav {
   font-size: 11px;
-  width: 100%;
-  text-align-last: justify;
 }
 #footer .subtitle {
-  width: 100%;
-  text-align-last: justify;
-  font-size: 18px;
-}
-@media (min-width: 992px) {
-  #footer .subtitle {
-    font-size: 34px;
-    padding-top: 10px;
-  }
+  font-size: 35px;
+  padding-top: 10px;
 }
 #footer a {
   color: #89d2dc;
@@ -7390,4 +7369,3 @@ section.intro-section h1 {
   /*   background-image: url("http://placehold.it/350x250?text=img5"); */
   background-image: url("/imgs/bg/camdenyards.jpg");
 }
-/*# sourceMappingURL=executivewelcome.map */

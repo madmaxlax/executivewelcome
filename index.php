@@ -59,6 +59,7 @@
 					<img src="./imgs/logo-only_inverted-.png" class="logo-img" alt="Executive Welcome logo">
 					<p>WELCOME
 					</p>
+					<div class="subtitle hidden-xs">Recruitment &amp; Relocation Assistance</div>
 				</a>
 			</div>
 
@@ -76,6 +77,7 @@
 								<span class="hidden-sm hidden-md"> EXECUTIVE</span>
 								<img src="./imgs/logo-only_inverted-.png" alt="E W logo">
 								<span class="hidden-sm hidden-md"> WELCOME</span>
+								<div class="subtitle-nav visible-lg">Recruitment &amp; Relocation Assistance</div>
 							</p>
 						</a>
 					</li>
@@ -128,7 +130,7 @@
 						<div class="clearfix"></div>
 						<img src="/imgs/people/SusieChisolm225-auto.jpg" width=225 height=225 alt="Susie Chisolm" class="bio-image">
 						<h1 class="bio-header">Susie Chisolm</h1>
-						<p class="bio-text">Susie has lived in Baltimore most of my life. She loves Baltimore and can help your employee and their family connect in Baltimore to what makes it a fun place to live and work. Susie initially trained with one of the country's oldest independent
+						<p class="bio-text">Susie has lived in Baltimore most of her life. She loves Baltimore and can help your employee and their family connect in Baltimore to what makes it a fun place to live and work. Susie initially trained with one of the country's oldest independent
 							relocation assistance firms, Executive Arrangements, Inc. of Cleveland, OH. She is a Certified Tourism Ambassador™....part of a nationwide group of hospitality professionals who are dedicated to enhancing the visitor experience in Baltimore!
 						</p>
 					</div>
@@ -386,8 +388,7 @@
 								<span class="fa fa-facebook"></span>
 							</div> -->
 							<img src="imgs/f_icon.svg" height="22px" alt=""> Facebook
-						</a>
-						<br>
+						</a> 
 						<a href="https://www.linkedin.com/in/susie-chisolm-29843617">
 							<!--<div class="circle linkedin">
 								<span class="fa fa-linkedin"></span>
@@ -397,6 +398,7 @@
 						<br>Copyright © 2009-2016 <a href="http://executivewelcomebaltimore.com">Susie Chisolm</a>.
 						<br>Baltimore photos courtesy of <a href="http://www.ronsolomonphoto.com/" target="_blank">Ron Solomon</a>.
 						<br>Site by <a href="http://madmaxlax.com" target="_blank">Max Struever</a> and design by <a href="http://alexakaminsky.com" target="_blank">Alexa Kaminsky</a>.
+						<br><a href="http://madewithloveinbaltimore.org" target="_blank">Made with &hearts; in Baltimore</a>
 					</div>
 				</div>
 			</div>

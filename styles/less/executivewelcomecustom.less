@@ -108,11 +108,26 @@ body, html {
 	@media (min-width: @screen-lg-min){
 		letter-spacing: 2px;
 	}
+	.subtitle-nav{
+		font-size: 11px;
+		width:100%;
+		text-align-last: justify;
+	}
+	.subtitle{
+		width:100%;
+		text-align-last: justify;
+		font-size: 18px;
+		@media (min-width: @screen-md-min){
+			font-size: 34px;
+			padding-top: 10px;
+		}
+	}
 }
 /*change bootstrap nav aspects*/
 
 .nav {
   > li {
+		vertical-align: middle;
     > a {
       &:hover,
       &:focus {
