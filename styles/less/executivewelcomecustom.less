@@ -34,14 +34,15 @@
 @nav-pills-active-link-hover-bg: @execwelcome-nav-active-hover-bg;
 
 /* vars */
-@execwelcome-text:black;
+@execwelcome-text:#333;
 @execwelcome-logo-bg:white;
+@execwelcome-link: @execwelcome-nav-active-hover;
 @stickynav-height-padding: 125px;
 @stickynav-height-padding-sm: 49px;
 @execwelcome-logo-width: 618px;
-@execwelcome-text-color: @navbar-default-bg;
+@execwelcome-text-color: #333;
 @execwelcome-section-bg:  #ffffff;
-@execwelcome-nav-active-hover: #89d2dc;
+@execwelcome-nav-active-hover: #DE8F00;
 @execwelcome-nav-active-hover-bg: transparent;
 /*testimonial-bordermonials*/
 @testimonial-border:solid 2px @execwelcome-text-color;
@@ -52,6 +53,13 @@
 body, html {
   /* important */
   height: 100%;
+}
+
+a {
+	color: @execwelcome-link;
+	&:hover,:focus {
+		color: @navbar-default-link-active-color;
+	}
 }
 
 * {
@@ -162,8 +170,8 @@ body, html {
     > a {
       &:hover,
       &:focus {
-				color: @execwelcome-nav-active-hover;
-        border-bottom-width: 1px;
+		color: @execwelcome-nav-active-hover;
+        border-bottom-width: 2px;
         border-bottom-color: @execwelcome-nav-active-hover;
       }
 		 &:active
@@ -283,13 +291,20 @@ ul.nav {
 	}
 	text-align: center;
 	font-size:@font-size-section;
-	ul
-	{
+	ul {
+		list-style-position: inside;
+		line-height: 2em;
+
+		li {
+			text-align: left;
 			list-style-position: inside;
-			line-height: 2em;
-			li
-			{
+    		line-height: 1.8em;
+    		padding: 10px 0 0 0;
+			span {
+				color: #666;
+				font-size:.8em;
 			}
+		}
 	}
 }
 .cd-main-content p::selection,.cd-main-content p::-moz-selection
@@ -300,7 +315,7 @@ ul.nav {
 }
 .section ul  {
 	padding:0;
-	ul 
+	ul
 	{
 		padding:0 0 0 10px;
 	}
@@ -355,7 +370,7 @@ ul.nav {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   width: 90%;
-  max-width: 1170px;
+  max-width: 117.0px;
   text-align: center;
   font-size: 30px;
   font-size: 1.875rem;
@@ -432,9 +447,20 @@ section.intro-section
 }
 
 #services {
+	ul  {
+		padding: 0 15px;
+		margin-bottom: 0
+	}
 	li {
 		padding: 20px 0 0 0;
-		list-style: none;
+		list-style-position: outside;
+		line-height: 1.8em;
+		text-align: left;
+	}
+	@media (max-width: @screen-sm-min) {
+		li {
+			list-style-position: inside;
+		}
 	}
 	@media (max-width: @screen-xs-max){
 		.sectionhr-header{
@@ -491,7 +517,7 @@ section.intro-section
 }
 .bio-text
 {
-	color: @execwelcome-text;
+	color: @execwelcome-text-color;
 	text-align:left;
 	font-size: 16px;
 	font-weight:300;	

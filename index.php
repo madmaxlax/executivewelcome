@@ -15,7 +15,7 @@
 
 	<!-- Bootstrap Core Less -->
 	<!-- 	<link rel="stylesheet" type="text/css" href="./styles/less/bootstrap.less" /> only use compiled now -->
-	<link rel="stylesheet" type="text/css" href="./styles/executivewelcome.min.css">
+	<link rel="stylesheet" type="text/css" href="./styles/executivewelcome.css">
 	<!-- 	open sans and lora fonts  -->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:100,400,300,600,700,900" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Lora:400,300,700" rel="stylesheet" type="text/css">
@@ -160,24 +160,28 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<h1 class="sectionhr"><span class="sectionhr-header">Relocation and Recruitment Assistance Services:</span></h1>
-						<ul>
-							<li>
-								</i>Pre-visit phone consultation with family considering the move</li>
-							<li>
-								</i>Comprehensive area information packet - customized to needs of the family</li>
-							<li>
-								</i>Welcoming basket of Baltimore-related goodies in their hotel room or sent to their home</li>
-							<li>
-								</i>Detailed research to provide the “inside scoop” regarding special hobbies, interests, schools, or special needs</li>
-							<li>
-								</i>Customized area orientation tour</li>
-							<li>
-								</i>School appointments</li>
-							<li>
-								</i>Introductions to community members with similar backgrounds &amp; interests</li>
-							<li>
-								</i>Spousal assistance for career or volunteer interests&nbsp;</li>
-						</ul>
+						<div class="row">
+							<ul class="col-md-5 col-sm-12">
+								<li>
+									</i>School appointments</li>
+								<li>
+									</i>Pre-visit phone consultation with family considering the move</li>
+								<li>
+									</i>Introductions to community members with similar backgrounds &amp; interests</li>
+								<li>
+									</i>Welcoming basket of Baltimore-related goodies in their hotel room or sent to their home</li>
+							</ul>
+							<ul class="col-md-5 col-md-offset-2 col-sm-12">
+								<li>
+									</i>Customized area orientation tour</li>
+								<li>
+									</i>Comprehensive area information packet - customized to needs of the family</li>
+								<li>
+									</i>Spousal assistance for career or volunteer interests&nbsp;</li>
+								<li>
+									</i>Detailed research to provide the “inside scoop” regarding special hobbies, interests, schools, or special needs</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -252,34 +256,32 @@
 					<div class="col-xs-12">
 						<h1 class="sectionhr"><span class="sectionhr-header">Related Links:</span></h1>
 					</div>
-					<br/>
-					<div class="col-lg-4 col-sm-6">
-							<div class="links-header">Great Information About Baltimore</div>
+					<br /><br />
+					<div class="col-sm-5 col-xs-12">
+						<div class="links-header">From Around The Web</div>
 						<ul>
-								<li><a href="http://www.greaterbaltimore.org" target="_blank">Economic Alliance of Baltimore</a></li>
-								<li><a href="http://www.baltimore.org" target="_blank">Visit Baltimore!</a></li>
-								<li><a href="http://www.baltimoresun.com/entertainment/dining/bal-100-foodies-pg1202,0,5822554.photogallery " target="_blank">100 Things You Have To Eat in Baltimore</a></li>
-								<li><a href="http://beingbawlmer.blogspot.com/2010/04/hello-baltimore-from-this-day-forward.html" target="_blank">Being Bawlmer</a></li>
-								<ul>
-									<li>A great blog about things to do in Baltimore </li>
-								</ul>
-								<li><a href="http://www.bizjournals.com/baltimore/news/2013/09/18/downtown-partnership-hopes-this-video.html" target="_blank">Baltimore is Exciting, Chic and Loaded with Talent</a></li>
-								<ul>
-									<li>A new TV ad showing off Baltimore. via Baltimore Business Journal</li>
-								</ul>
-								<li><a href="http://www.baltimoresun.com/entertainment/101-days-in-baltimore/" target="_blank">101 Days in Baltimore</a></li>
-								<ul>
-									<li>Great lists of activities in Baltimore </li>
-								</ul>
+							<li><a href="http://www.greaterbaltimore.org" target="_blank">Economic Alliance of Baltimore</a></li>
+							<li><a href="http://www.baltimore.org" target="_blank">Visit Baltimore!</a></li>
+							<li><a href="http://www.baltimoresun.com/entertainment/dining/bal-100-foodies-pg1202,0,5822554.photogallery " target="_blank">100 Things You Have To Eat in Baltimore</a></li>
+							<li>
+								<a href="http://beingbawlmer.blogspot.com/2010/04/hello-baltimore-from-this-day-forward.html" target="_blank">Being Bawlmer:</a>
+								<span>A great blog about things to do in Baltimore </span>
+							</li>
+							<li>
+								<a href="http://www.bizjournals.com/baltimore/news/2013/09/18/downtown-partnership-hopes-this-video.html" target="_blank">Baltimore is Exciting, Chic and Loaded with Talent:</a>
+								<span>A new TV ad showing off Baltimore. via Baltimore Business Journal</span>
+							</li>
+							<li>
+								<a href="http://www.baltimoresun.com/entertainment/101-days-in-baltimore/" target="_blank">101 Days in Baltimore:</a>
+								<span>Great lists of activities in Baltimore</span>
+							</li>
+							<li>
+								<a href="http://www.Kidbaltimore.com" target="_blank">Kid Baltimore.Com</a>
+								<span>Especially for Families with Kids</span>
+							</li>
 						</ul>
 					</div>
-					<div class="col-lg-4 col-sm-6">
-						<div class="links-header">Especially for Families with Kids</div>
-						<ul>
-							<li><a href="http://www.Kidbaltimore.com" target="_blank">Kid Baltimore.Com</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-4 col-sm-6">
+					<div class="col-sm-5 col-sm-offset-2 col-xs-12">
 						<div class="links-header"> The latest posts from our
 							<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
 								<img src="imgs/f_icon.svg" height="18px" alt=""> Facebook
@@ -323,6 +325,7 @@
 								<img src="imgs/linkedin_icon.svg" height="22px" alt=""> Susie Chisolm on LinkedIn
 							</a>
 						</div>
+
 						<?php
 						//contact form message
 							if (isset($_REQUEST['contactsentsuccess']) && $_REQUEST['contactsentsuccess'])
@@ -339,6 +342,7 @@
 							}
 							else {//if no result from a contact form, display the full form 
 						?>
+
 								<form method="post" action="contactsend.php" id="contactformpage">
 									<!-- form format courtesy of @mildrenben http://codepen.io/mildrenben/pen/raqJvy -->
 
