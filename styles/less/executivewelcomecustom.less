@@ -32,6 +32,8 @@
 
 @nav-pills-border-radius: @border-radius-pills;
 @nav-pills-active-link-hover-bg: @execwelcome-nav-active-hover-bg;
+@nav-toggle-button-margin-compensation: -60px;
+@nav-toggle-button-margin-right-xs: 7px;
 
 /* vars */
 @execwelcome-text:#333;
@@ -63,7 +65,7 @@ a {
 }
 
 * {
-/* 	transition: all .5s ease-in-out, top 0s, left 0s, width 0s, height 0s; */
+/* 	transition: all .1s ease-in-out, top 0s, left 0s, width 0s, height 0s; */
 }
 
 .navbar-header {
@@ -86,25 +88,29 @@ a {
     margin-bottom: 0;
     letter-spacing: 3px;
     display: inline;
-    line-height: 47px;
+		@media (min-width: @screen-sm-min){
+    	line-height: 47px;
+		}
     vertical-align: middle;
   }
-	svg, img{
-		width:55px;
-		background-color:@execwelcome-logo-bg;
+	img.logo-img{
+		width:55px;		
+		height:50px;
 	}
 	
 	@media (max-width: @screen-xs-max){
-		margin-right:-60px; //compensate for the button
+		margin-right:@nav-toggle-button-margin-compensation; //compensate for the button
 		padding:0;
 		font-size:@font-size-navbar-brand-sm;
-		svg, img
+		img.logo-img
 		{
 			display:none;
 		}
 	}
 	@media (max-width: @screen-xs-min){
 		font-size:@font-size-navbar-brand-xs;	
+		margin-top: 4px;
+		margin-right:@nav-toggle-button-margin-compensation + @nav-toggle-button-margin-right-xs;
 	}
 }
 
@@ -114,9 +120,6 @@ a {
 	.navbar-logo h1{
 		padding:0;
 		margin:0;
-		svg, img{
-			background-color:@execwelcome-logo-bg;
-		}
 	}
 	&:not(.top-nav-collapse){
 		.navbar-logo
@@ -125,7 +128,13 @@ a {
 			display:none;
 		}
 	}
-	
+	img{
+		background-color:@execwelcome-logo-bg;
+	}
+	img.logo-img-scroll{
+		height:25px;		
+		width:27px;
+	}
 	@media (min-width: @screen-lg-min){
 		letter-spacing: 2px;
 		.navbar-logo {
@@ -139,8 +148,7 @@ a {
 			.maintitle-nav-welcome{
 				float:right;
 			}
-			svg, img{
-				height:25px;
+			img.logo-img-scroll{
 				margin-top:-5px;
 			}
 		}
@@ -150,14 +158,24 @@ a {
 		width:100%;
 		text-align-last: justify;
 	}
+	
 	.subtitle{
 		width:100%;
 		text-align-last: justify;
-		font-size: 18px;
+		@media (max-width: @screen-xs-min){
+			font-size: 13px;
+			margin-left:-1px;
+		}
+		@media (min-width: @screen-xs-min){
+			font-size: 18px;
+		}
 		@media (min-width: @screen-sm-min){
 			font-size: 34px;
 			padding-top: 10px;
 		}
+	}
+	button.navbar-toggle{
+		margin-right:@nav-toggle-button-margin-right-xs;
 	}
 }
 /*change bootstrap nav aspects*/
@@ -370,7 +388,7 @@ ul.nav {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   width: 90%;
-  max-width: 117.0px;
+/*   max-width: 117.0px; why is this here*/
   text-align: center;
   font-size: 30px;
   font-size: 1.875rem;

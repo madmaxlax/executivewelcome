@@ -61,7 +61,7 @@
 
 					<p>WELCOME
 					</p>
-					<div class="subtitle hidden-xs">Recruitment &amp; Relocation Assistance</div>
+					<div class="subtitle">Recruitment &amp; Relocation Assistance</div>
 				</a>
 			</div>
 
@@ -77,7 +77,7 @@
 						<a href="#intro" class="page-scroll">
 							<h1>
 								<span class="maintitle-nav maintitle-nav-executive hidden-sm hidden-md"> EXECUTIVE</span>
-								<img src="./imgs/executive-welcome-logo.svg"  alt="E W logo">
+								<img src="./imgs/executive-welcome-logo.svg" class="logo-img-scroll" alt="E W logo">
 <!-- 								<svg class="icon" viewBox="0 0 32 32" alt="E W Logo"><use xlink:href="./imgs/executive-welcome-logo.svg"></use></svg> -->
 								<span class="maintitle-nav maintitle-nav-welcome hidden-sm hidden-md"> WELCOME</span>
 								<div class="subtitle-nav visible-lg">Recruitment &amp; Relocation Assistance</div>
