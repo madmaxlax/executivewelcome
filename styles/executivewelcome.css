@@ -7366,6 +7366,7 @@ section.intro-section h1 {
 }
 #contact .contact-social-link img {
   vertical-align: top;
+  background-color: transparent;
 }
 #contact .contact-social-link .fb-like {
   top: -5px;
@@ -7383,6 +7384,9 @@ section.intro-section h1 {
   color: white;
   background-color: black;
   margin-bottom: 0;
+}
+#footer img.img-social {
+  background-color: transparent;
 }
 @media (min-width: 768px) {
   #footer {

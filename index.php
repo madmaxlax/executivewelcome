@@ -389,13 +389,13 @@
 							<!--<div class="circle facebook">
 								<span class="fa fa-facebook"></span>
 							</div> -->
-							<img src="imgs/f_icon.svg" height="22px" alt=""> Facebook
+							<img src="imgs/f_icon.svg" height="22px" class="img-social" alt=""> Facebook
 						</a>
 						<a href="https://www.linkedin.com/in/susie-chisolm-29843617">
 							<!--<div class="circle linkedin">
 								<span class="fa fa-linkedin"></span>
 							</div>-->
-							<img src="imgs/linkedin_icon.svg" height="22px" alt=""> LinkedIn
+							<img src="imgs/linkedin_icon.svg" height="22px" class="img-social" alt=""> LinkedIn
 						</a>
 						<br>Copyright © 2009-2016 <a href="http://executivewelcomebaltimore.com">Susie Chisolm</a>.
 						<br>Baltimore photos courtesy of <a href="http://www.ronsolomonphoto.com/" target="_blank">Ron Solomon</a>.
