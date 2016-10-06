@@ -50,7 +50,7 @@ $.getScript('//connect.facebook.net/en_US/sdk.js', function() {
   FB.api(
     "/161256610565493/posts?limit=5&fields=link,attachments{title,description,url,media,target,type},picture,full_picture,message,story,event&access_token=600350606801127|xmbJ8xiD7cDXyAM8elE81GdmW3Y",
     function(response) {
-      console.log(response);
+      //console.log(response);
       if (response && !response.error) {
         posts = response.data; //got the posts
         //$("#postcount").text(posts.length);
