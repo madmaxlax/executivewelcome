@@ -260,7 +260,7 @@
 					
 					<div class="col-sm-5 col-xs-12">
 						<div class="links-header"> The latest posts from our
-							<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
+							<a href="https://www.facebook.com/ExecutiveWelcome/" target="_blank">
 								<img src="imgs/f_icon.svg" height="18px" alt=""> Facebook
 							</a> page
 						</div>
@@ -271,7 +271,7 @@
 							<li id="post4" class="fb-post-item">Loading...</li>
 							<li id="post5" class="fb-post-item">Loading...</li>
 						</ul>
-						<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
+						<a href="https://www.facebook.com/ExecutiveWelcome/" target="_blank">
 									See more...
 									</a>
 					</div>
@@ -316,10 +316,10 @@
 						<br/>
 						<h2 class="section-subhead">Would you like to know more? Please feel free to reach out to us!</h2>
 						<div class="contact-social-link">
-							<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
+							<a href="https://www.facebook.com/ExecutiveWelcome/" target="_blank">
 								<img src="imgs/f_icon.svg" height="22px" alt=""> Executive Welcome on Facebook
 							</a>
-							<div class="fb-like" data-href="https://www.facebook.com/Executive-Welcome-161256610565493/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+							<div class="fb-like" data-href="https://www.facebook.com/ExecutiveWelcome/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 						</div>
 						<div class="contact-social-link">
 							<a href="https://www.linkedin.com/in/susie-chisolm-29843617" target="_blank">
@@ -386,7 +386,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<a href="https://www.facebook.com/Executive-Welcome-161256610565493/">
+						<a href="https://www.facebook.com/ExecutiveWelcome/">
 							<!--<div class="circle facebook">
 								<span class="fa fa-facebook"></span>
 							</div> -->
