@@ -265,11 +265,11 @@
 							</a> page
 						</div>
 						<ul>
-							<li id="post1">Loading...</li>
-							<li id="post2">Loading...</li>
-							<li id="post3">Loading...</li>
-							<li id="post4">Loading...</li>
-							<li id="post5">Loading...</li>
+							<li id="post1" class="fb-post-item">Loading...</li>
+							<li id="post2" class="fb-post-item">Loading...</li>
+							<li id="post3" class="fb-post-item">Loading...</li>
+							<li id="post4" class="fb-post-item">Loading...</li>
+							<li id="post5" class="fb-post-item">Loading...</li>
 						</ul>
 						<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
 									See more...

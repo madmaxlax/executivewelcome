@@ -7249,12 +7249,26 @@ section.intro-section h1 {
   font-weight: 300;
   font-color: "Lora", Helvetica, Arial, sans-serif;
 }
+#links {
+  /* 	a:hover .fb-post-img {
+		display:block;
+	} */
+}
 #links .links-header {
   text-align: left;
   font-weight: 800;
 }
 #links ul {
   text-align: initial;
+}
+#links .fb-post-img {
+  border: solid 1px #333333;
+  /* 		display: none; */
+  float: right;
+  margin: 10px 0 0 10px;
+}
+#links li.fb-post-item {
+  clear: both;
 }
 #contact form {
   box-sizing: border-box;

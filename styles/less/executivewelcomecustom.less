@@ -46,9 +46,11 @@
 @execwelcome-section-bg:  #ffffff;
 @execwelcome-nav-active-hover: #DE8F00;
 @execwelcome-nav-active-hover-bg: transparent;
+@execwelcome-img-padding:10px;
 /*testimonial-bordermonials*/
 @testimonial-border:solid 2px @execwelcome-text-color;
 @testimonial-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 12px rgba(82, 168, 236, 0.6);
+@execwelcome-img-border: solid 1px @execwelcome-text-color;
 
 
 
@@ -524,8 +526,8 @@ section.intro-section
 .bio-image
 {
 	float:left;
-	margin: @line-height-computed 10px 10px 0;
-	border: solid 1px @execwelcome-text-color;
+	margin: @line-height-computed @execwelcome-img-padding @execwelcome-img-padding 0;
+	border: @execwelcome-img-border;
 }
 .bio-header
 {
@@ -549,6 +551,18 @@ section.intro-section
 	ul {
 		text-align:initial;
 	}
+	.fb-post-img{
+    border: @execwelcome-img-border;
+/* 		display: none; */
+		float: right;
+		margin: @execwelcome-img-padding 0 0 @execwelcome-img-padding;
+	}
+	li.fb-post-item{
+		clear:both;
+	}
+/* 	a:hover .fb-post-img {
+		display:block;
+	} */
 }
 #contact
 {

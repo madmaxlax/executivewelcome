@@ -50,25 +50,30 @@ $.getScript('//connect.facebook.net/en_US/sdk.js', function() {
   FB.api(
     "/161256610565493/posts?limit=5&fields=link,attachments{title,description,url,media,target,type},picture,full_picture,message,story,event&access_token=600350606801127|xmbJ8xiD7cDXyAM8elE81GdmW3Y",
     function(response) {
-      //console.log(response);
+      console.log(response);
       if (response && !response.error) {
         posts = response.data; //got the posts
         //$("#postcount").text(posts.length);
         for (i = 0; i < posts.length; i++) {
           var posthtml = "";
           var txtlen = 200;
+          var imgHtml = "";
+          if (posts[i].picture && posts[i].picture.length > 0) {
+            imgHtml = ' <img src="' + posts[i].picture + '" class="fb-post-img" title="photo from FB post" alt="photo from FB post">';
+          }
+
           //if message and no link
           if (posts[i].message && !(posts[i].attachments.data.length > 0)) {
-            posthtml = '<a target="_blank" href="https://facebook.com/' + posts[i].id + '" title="Post from ' + posts[i].created_time + '" >"' + textShorten(posts[i].message, txtlen) + '"</a>';
+            posthtml = '<a target="_blank" href="https://facebook.com/' + posts[i].id + '" title="Post from ' + posts[i].created_time + '" >' + imgHtml + '"' + textShorten(posts[i].message, txtlen) + '"</a>';
           }
           //if message and link, sub li
           if (posts[i].message && posts[i].attachments.data.length > 0) {
-            posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >"' + textShorten(posts[i].message, txtlen) + '"\
+            posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >' + imgHtml + '"' + textShorten(posts[i].message, txtlen) + '"\
               <ul><li>' + textShorten(posts[i].attachments.data[0].title, txtlen) + '</li></ul></a>';
           }
           //if no message, just a share
           if (!posts[i].message && posts[i].attachments.data.length > 0) {
-            posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >"' + textShorten(posts[i].attachments.data[0].title, txtlen) + '"</a>';
+            posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >' + imgHtml + '"' + textShorten(posts[i].attachments.data[0].title, txtlen) + '"</a>';
           }
 
           //set the  HTML for the post
