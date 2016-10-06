@@ -257,7 +257,25 @@
 						<h1 class="sectionhr"><span class="sectionhr-header">Related Links:</span></h1>
 					</div>
 					<br /><br />
+					
 					<div class="col-sm-5 col-xs-12">
+						<div class="links-header"> The latest posts from our
+							<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
+								<img src="imgs/f_icon.svg" height="18px" alt=""> Facebook
+							</a> page
+						</div>
+						<ul>
+							<li id="post1">Loading...</li>
+							<li id="post2">Loading...</li>
+							<li id="post3">Loading...</li>
+							<li id="post4">Loading...</li>
+							<li id="post5">Loading...</li>
+						</ul>
+						<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
+									See more...
+									</a>
+					</div>
+					<div class="col-sm-5 col-sm-offset-2 col-xs-12">
 						<div class="links-header">From Around The Web</div>
 						<ul>
 							<li><a href="http://www.greaterbaltimore.org" target="_blank">Economic Alliance of Baltimore</a></li>
@@ -280,23 +298,6 @@
 								<span>Especially for Families with Kids</span>
 							</li>
 						</ul>
-					</div>
-					<div class="col-sm-5 col-sm-offset-2 col-xs-12">
-						<div class="links-header"> The latest posts from our
-							<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
-								<img src="imgs/f_icon.svg" height="18px" alt=""> Facebook
-							</a> page
-						</div>
-						<ul>
-							<li id="post1">Loading...</li>
-							<li id="post2">Loading...</li>
-							<li id="post3">Loading...</li>
-							<li id="post4">Loading...</li>
-							<li id="post5">Loading...</li>
-						</ul>
-						<a href="https://www.facebook.com/Executive-Welcome-161256610565493/" target="_blank">
-									See more...
-									</a>
 					</div>
 				</div>
 			</div>

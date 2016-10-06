@@ -28,68 +28,68 @@ $(function() {
 });
 
 //function to concatonate and add ellipses to long titles...
-function textShorten(str, chars){
-  var useWordBoundary= true;
+function textShorten(str, chars) {
+  var useWordBoundary = true;
   var isTooLong = str.length > chars,
-        s_ = isTooLong ? str.substr(0,chars-1) : str;
-        s_ = (useWordBoundary && isTooLong) ? s_.substr(0,s_.lastIndexOf(' ')) : s_;
-    return  isTooLong ? s_ + '&hellip;' : s_;
+    s_ = isTooLong ? str.substr(0, chars - 1) : str;
+  s_ = (useWordBoundary && isTooLong) ? s_.substr(0, s_.lastIndexOf(' ')) : s_;
+  return isTooLong ? s_ + '&hellip;' : s_;
 }
 var posts = null;
 //$(document).ready(function() {
-  $.ajaxSetup({
-    cache: true
+$.ajaxSetup({
+  cache: true
+});
+$.getScript('//connect.facebook.net/en_US/sdk.js', function() {
+  FB.init({
+    appId: '600350606801127',
+    version: 'v2.6' // or v2.1, v2.2, v2.3, ...
   });
-  $.getScript('//connect.facebook.net/en_US/sdk.js', function() {
-    FB.init({
-      appId: '600350606801127',
-      version: 'v2.6' // or v2.1, v2.2, v2.3, ...
-    });
 
-    //get recent posts
-    FB.api(
-      "/161256610565493/posts?limit=5&fields=link,attachments{title,description,url,media,target,type},picture,full_picture,message,story,event&access_token=600350606801127|xmbJ8xiD7cDXyAM8elE81GdmW3Y",
-      function(response) {
-        console.log(response);
-        if (response && !response.error) {
-          posts = response.data; //got the posts
-          //$("#postcount").text(posts.length);
-          for (i = 0; i < posts.length; i++) {
-            var posthtml = "";
-            var txtlen = 65;
-            //if message and no link
-            if (posts[i].message && !(posts[i].attachments.data.length > 0)) {
-              posthtml = '<a target="_blank" href="https://facebook.com/' + posts[i].id + '" title="Post from ' + posts[i].created_time + '" >' + textShorten(posts[i].message, txtlen) + ";</a>";
-            }
-            //if message and link, sub li
-            if (posts[i].message && posts[i].attachments.data.length > 0) {
-              posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >' + textShorten(posts[i].message, txtlen)  + '\
-              <ul><li>"' + textShorten(posts[i].attachments.data[0].title, txtlen) + '"</li></ul></a>';
-            }
-            //if no message, just a share
-            if (!posts[i].message && posts[i].attachments.data.length > 0) {
-              posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >"' + textShorten(posts[i].attachments.data[0].title, txtlen) + '"</a>';
-            }
-
-            //set the  HTML for the post
-            $("#post" + (i + 1)).html(posthtml);
-            //             FB.api(
-            //               "/"+posts[i].id+"?access_token=600350606801127|xmbJ8xiD7cDXyAM8elE81GdmW3Y",
-            //               function(response) {
-            //                 console.log(response);
-            //                 if (response && !response.error) {
-
-            //                 }
-            //               });
+  //get recent posts
+  FB.api(
+    "/161256610565493/posts?limit=5&fields=link,attachments{title,description,url,media,target,type},picture,full_picture,message,story,event&access_token=600350606801127|xmbJ8xiD7cDXyAM8elE81GdmW3Y",
+    function(response) {
+      //console.log(response);
+      if (response && !response.error) {
+        posts = response.data; //got the posts
+        //$("#postcount").text(posts.length);
+        for (i = 0; i < posts.length; i++) {
+          var posthtml = "";
+          var txtlen = 200;
+          //if message and no link
+          if (posts[i].message && !(posts[i].attachments.data.length > 0)) {
+            posthtml = '<a target="_blank" href="https://facebook.com/' + posts[i].id + '" title="Post from ' + posts[i].created_time + '" >"' + textShorten(posts[i].message, txtlen) + '"</a>';
           }
-        } else {
-          console.log("there was an error", response.error);
+          //if message and link, sub li
+          if (posts[i].message && posts[i].attachments.data.length > 0) {
+            posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >"' + textShorten(posts[i].message, txtlen) + '"\
+              <ul><li>' + textShorten(posts[i].attachments.data[0].title, txtlen) + '</li></ul></a>';
+          }
+          //if no message, just a share
+          if (!posts[i].message && posts[i].attachments.data.length > 0) {
+            posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >"' + textShorten(posts[i].attachments.data[0].title, txtlen) + '"</a>';
+          }
+
+          //set the  HTML for the post
+          $("#post" + (i + 1)).html(posthtml);
+          //             FB.api(
+          //               "/"+posts[i].id+"?access_token=600350606801127|xmbJ8xiD7cDXyAM8elE81GdmW3Y",
+          //               function(response) {
+          //                 console.log(response);
+          //                 if (response && !response.error) {
+
+          //                 }
+          //               });
         }
+      } else {
+        console.log("there was an error", response.error);
       }
-    );
-    //$('#loginbutton,#feedbutton').removeAttr('disabled');
-    //FB.getLoginStatus(updateStatusCallback);
-  });
+    }
+  );
+  //$('#loginbutton,#feedbutton').removeAttr('disabled');
+  //FB.getLoginStatus(updateStatusCallback);
+});
 //});
 // $(document).ready(function() {
 // 	$('a.page-scroll').bind('click', function(e) {
