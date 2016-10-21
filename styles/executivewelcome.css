@@ -6933,6 +6933,29 @@ a :focus {
 .nav > li > a:active {
   color: #452c00;
 }
+.ew-button {
+  transition: transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), box-shadow 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  border: none;
+  background: black;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 50%;
+  color: white;
+  margin: 30px 0 0 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+.ew-button:hover {
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
+  background: #333333;
+  color: white;
+  text-decoration: none;
+}
+.ew-button:active {
+  background: #000000;
+  transform: translateY(1px);
+}
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
@@ -7269,6 +7292,8 @@ section.intro-section h1 {
   margin: 10px 0 0 10px;
 }
 #links li.fb-post-item {
+  max-width: 100%;
+  overflow: hidden;
   clear: both;
 }
 #contact form {
@@ -7355,26 +7380,6 @@ section.intro-section h1 {
 }
 #contact .flex textarea {
   line-height: 120%;
-}
-#contact button {
-  transition: transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), box-shadow 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  border: none;
-  background: black;
-  cursor: pointer;
-  border-radius: 3px;
-  padding: 6px;
-  width: 50%;
-  color: white;
-  margin: 30px 0 0 0;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
-}
-#contact button:hover {
-  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
-  background: #333333;
-}
-#contact button:active {
-  background: #000000;
-  transform: translateY(1px);
 }
 #contact .contact-social-link {
   margin: 40px 0;

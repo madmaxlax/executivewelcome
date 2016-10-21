@@ -8,11 +8,6 @@
 @navbar-default-bg: black;
 @border-radius-pills:0px;
 
-@navbar-default-link-color:                white;
-@navbar-default-link-hover-color:          @execwelcome-nav-active-hover;
-@navbar-default-link-active-color:         darken(@execwelcome-nav-active-hover, 10%);
-@navbar-default-link-active-bg:            transparent;
-
 @navbar-default-link-color:white;
 @navbar-default-link-hover-color: @execwelcome-nav-active-hover;
 @navbar-default-link-active-color: darken(@execwelcome-nav-active-hover, 10%);
@@ -52,6 +47,13 @@
 @testimonial-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 12px rgba(82, 168, 236, 0.6);
 @execwelcome-img-border: solid 1px @execwelcome-text-color;
 
+
+@base: @navbar-default-bg;
+@text: @execwelcome-text-color;
+@invalid-color: #E91E63;
+@width: 100%;
+@offscreen:2000px;
+@cubic: cubic-bezier(.64,.09,.08,1);
 
 
 body, html {
@@ -201,6 +203,31 @@ a {
     }
 
   }
+}
+
+.ew-button {
+	transition: transform 0.2s @cubic,
+	box-shadow 0.2s @cubic;
+	border: none;
+	background: @base;
+	cursor: pointer;
+	border-radius: 3px;
+	padding: 6px;
+	width: (@width/2);
+	color: white;
+	margin: 30px 0 0 0;
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+	font-family:@headings-font-family;
+	&:hover { 
+		box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+		background: lighten(@base,20%);	
+		color: white;
+		text-decoration:none;
+	}
+	&:active{
+		background: darken(@base,20%);
+		transform: translateY(1px);
+	}
 }
 
 .nav-tabs {
@@ -559,6 +586,8 @@ section.intro-section
 		margin: @execwelcome-img-padding 0 0 @execwelcome-img-padding;
 	}
 	li.fb-post-item{
+		max-width: 100%;
+    overflow: hidden;
 		clear:both;
 	}
 /* 	a:hover .fb-post-img {
@@ -567,12 +596,6 @@ section.intro-section
 }
 #contact
 {
-	@base: @navbar-default-bg;
-	@text: @execwelcome-text-color;
-	@invalid-color: #E91E63;
-	@width: 100%;
-	@offscreen:2000px;
-	@cubic: cubic-bezier(.64,.09,.08,1);
 
 	form{
 	}
@@ -660,27 +683,6 @@ section.intro-section
 		}
 	}
 
-	button {
-		transition: transform 0.2s @cubic,
-			 box-shadow 0.2s @cubic;
-		border: none;
-		background: @base;
-		cursor: pointer;
-		border-radius: 3px;
-		padding: 6px;
-		width: (@width/2);
-		color: white;
-		margin: 30px 0 0 0;
-		box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
-		&:hover { 
-			box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
-			background: lighten(@base,20%);			
-		}
-		&:active{
-			background: darken(@base,20%);
-			transform: translateY(1px);
-		}
-	}
 
 	.contact-social-link{
 		margin: 40px 0;

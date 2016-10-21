@@ -28,7 +28,16 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="200">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-9932775-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
 	<!-- FB necessary -->
 	<div id="fb-root"></div>
 	<script>
@@ -57,7 +66,7 @@
 						EXECUTIVE
 					</p>
 					<img src="./imgs/executive-welcome-logo.svg" class="logo-img" alt="Executive Welcome logo">
-<!-- 					<svg class="icon" viewBox="0 0 32 32" class="logo-img" alt="Executive Welcome logo"><use xlink:href="./imgs/executive-welcome-logo.svg"></use></svg> -->
+					<!-- 					<svg class="icon" viewBox="0 0 32 32" class="logo-img" alt="Executive Welcome logo"><use xlink:href="./imgs/executive-welcome-logo.svg"></use></svg> -->
 
 					<p>WELCOME
 					</p>
@@ -83,25 +92,25 @@
 								<div class="subtitle-nav visible-lg">Recruitment &amp; Relocation Assistance</div>
 							</h1>
 						</a>
-					</l>
-					<li>
-						<a class="page-scroll" href="#intro">Home</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#about">About</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#services">Services</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#testimonials">Testimonials</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#links">Links</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#contact">Contact Us</a>
-					</li>
+						</l>
+						<li>
+							<a class="page-scroll" href="#intro">Home</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#about">About</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#services">Services</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#testimonials">Testimonials</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#links">Links</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#contact">Contact Us</a>
+						</li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -146,6 +155,9 @@
 						</p>
 					</div>
 				</div>
+<!-- 				CTA Button -->
+				<br/>
+				<a class="page-scroll ew-button" href="#contact">Contact us for a consultation</a>
 			</div>
 			<div class="clearfix"></div>
 		</section>
@@ -257,7 +269,7 @@
 						<h1 class="sectionhr"><span class="sectionhr-header">Related Links:</span></h1>
 					</div>
 					<br /><br />
-					
+
 					<div class="col-sm-5 col-xs-12">
 						<div class="links-header"> The latest posts from our
 							<a href="https://www.facebook.com/ExecutiveWelcome/" target="_blank">
@@ -370,7 +382,7 @@
 											</div>
 										</div>
 									</div>
-									<button name="submit" type="submit">Send</button>
+									<button name="submit" class="ew-button" type="submit">Send</button>
 								</form>
 								<?php
 							} ?>
@@ -398,7 +410,7 @@
 							</div>-->
 							<img src="imgs/linkedin_icon.svg" height="22px" class="img-social" alt=""> LinkedIn
 						</a>
-						<br>Copyright © 2009-2016 <a href="http://executivewelcomebaltimore.com">Susie Chisolm</a>.
+						<br>Copyright © 2009-<?php echo date("Y"); ?> <a href="http://executivewelcomebaltimore.com">Susie Chisolm</a>.
 						<br>Baltimore photos courtesy of <a href="http://www.ronsolomonphoto.com/" target="_blank">Ron Solomon</a>.
 						<br>Site by <a href="http://madmaxlax.com" target="_blank">Max Struever</a> and design by <a href="http://alexakaminsky.com" target="_blank">Alexa Kaminsky</a>.
 						<br><a href="http://madewithloveinbaltimore.org" target="_blank">Made with &hearts; in Baltimore</a>
@@ -407,6 +419,7 @@
 			</div>
 		</section>
 	</div>
+
 	<!--jquery js -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 	<!--bootstrap js -->
