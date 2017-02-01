@@ -92,7 +92,7 @@
 								<div class="subtitle-nav visible-lg">Recruitment &amp; Relocation Assistance</div>
 							</h1>
 						</a>
-						</l>
+						</li>
 						<li>
 							<a class="page-scroll" href="#intro">Home</a>
 						</li>
@@ -382,6 +382,7 @@
 											</div>
 										</div>
 									</div>
+									<div class="g-recaptcha" data-sitekey="6Lds8xMUAAAAAEkxwFjKh6fQ7c4dZxb-bmn6pd40"></div>
 									<button name="submit" class="ew-button" type="submit">Send</button>
 								</form>
 								<?php
@@ -426,6 +427,7 @@
 	<script src="./js/bootstrap.min.js"></script>
 	<!--custom js -->
 	<script src="./js/executivewelcomecustom.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </body>
 
 </html>

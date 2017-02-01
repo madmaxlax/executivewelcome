@@ -18,12 +18,29 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['emailaddress']) && isset($_REQU
 	$headers = 'From: ' . $from . "\r\n" .
 							'Reply-To: ' . $email . "\r\n" .
 						'X-Mailer: PHP/' . phpversion();
+	
+	//Google Captcha checker
+	
+	if(isset($_POST['g-recaptcha-response'])){
+		$captcha=$_POST['g-recaptcha-response'];
+	}
+	$secret = '6Lds8xMUAAAAAJkOm3xh3CUAgktiDvEnQbEu2Kes';
+	$response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+	if($response['success'] == false)
+	{
+		echo '<h2>You have been detected as a spammer, please go back and ensure you checked the box "I am no a robot"<a href="Javascript:history.go(-1);">Go Back</a></h2>';
+	}
+	else //good, send email
+	{
+		//returns true if sending was successful
+		if (mail($to, $subject, $body, $headers)){
+			//redirect back to page
+			header("Location: ./?contactsentsuccess=true#contact");
+		}
+		else
+			echo 'Error with sending mail, <a href="Javascript:history.go(-1);">Go Back</a>';
+	}
 
-
-	if (mail($to, $subject, $body, $headers))
-		header("Location: ./?contactsentsuccess=true#contact");
-	else
-		echo 'Error with sending mail, <a href="Javascript:history.go(-1);">Go Back</a>';
 
 }
 else
