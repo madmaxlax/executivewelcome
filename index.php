@@ -46,7 +46,7 @@
 			if (d.getElementById(id)) return;
 			js = d.createElement(s);
 			js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=600350606801127";
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=600350606801127";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
@@ -327,6 +327,7 @@
 						<h1 class="sectionhr"><span class="sectionhr-header">Contact Us</span></h1>
 						<br/>
 						<h2 class="section-subhead">Would you like to know more? Please feel free to reach out to us!</h2>
+            <h2 class="section-subhead">Call 410-575-3756</h2>
 						<div class="contact-social-link">
 							<a href="https://www.facebook.com/ExecutiveWelcome/" target="_blank">
 								<img src="imgs/f_icon.svg" height="22px" alt=""> Executive Welcome on Facebook
@@ -411,6 +412,7 @@
 							</div>-->
 							<img src="imgs/linkedin_icon.svg" height="22px" class="img-social" alt=""> LinkedIn
 						</a>
+            <br>(410) 575-3756
 						<br>Copyright © 2009-<?php echo date("Y"); ?> <a href="http://executivewelcomebaltimore.com">Susie Chisolm</a>.
 						<br>Baltimore photos courtesy of <a href="http://www.ronsolomonphoto.com/" target="_blank">Ron Solomon</a>.
 						<br>Site by <a href="http://madmaxlax.com" target="_blank">Max Struever</a> and design by <a href="http://alexakaminsky.com" target="_blank">Alexa Kaminsky</a>.
