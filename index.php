@@ -305,10 +305,6 @@
 								<a href="http://www.baltimoresun.com/entertainment/101-days-in-baltimore/" target="_blank">101 Days in Baltimore:</a>
 								<span>Great lists of activities in Baltimore</span>
 							</li>
-							<li>
-								<a href="http://www.Kidbaltimore.com" target="_blank">Kid Baltimore.Com</a>
-								<span>Especially for Families with Kids</span>
-							</li>
 						</ul>
 					</div>
 				</div>
