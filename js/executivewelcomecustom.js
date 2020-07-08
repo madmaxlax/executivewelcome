@@ -59,9 +59,9 @@ $.getScript("//connect.facebook.net/en_US/sdk.js", function () {
 
   //get recent posts
   FB.api(
-    "/161256610565493/posts?limit=5&fields=link,attachments{title,description,url,media,target,type},picture,full_picture,message,story,event&access_token=" +
+    "/161256610565493/posts?limit=5&fields=attachments{title,description,url,media,target,type},picture,full_picture,message,story,event&access_token=" +
       atob(
-        "RUFBSWlCQVNvdU9jQkFDOXFteEwwYkhyaGoxdkxIZnRZZG44WXVpRU9TYVpDcWY2T2xaQmNGVVNsTERwWkJmRnpjcEFqWUdMT3M0NGw2WEFRblFYc3JwU1lmOVpBU0pYMWZ6MGo3SWl6eEk2Z0RrMlk1NDl4MzlFV2NsREQ4YkVWTmJiT2drYzdvT1pDSllpTEpNZmpEamlPQlFGUGpsWkFWNFZSM1ZpMGp1WUFaRFpE"
+        "RUFBSWlCQVNvdU9jQkFNaDQ2bjJPeVFpZlA2bmVySHp6THBsQld4VG5XdVFYeldYbTNRYUE0M0h4aWE1bGQ0RzVDYURTQ0pWMTVZZGM3V2pQcHpuUldPTlVuclUxcWVzRzRjQmlaQ01Pc0ZseXRDOXV0NUlzeXllTk1Hc3lIS0cyd3BjZFlZUDFjNnloeGlzWkJQM3RqMUUyZlRwZ2JIZlB6aHVhS0tJZ1pEWkQ="
       ),
     function (response) {
       console.log(response);
