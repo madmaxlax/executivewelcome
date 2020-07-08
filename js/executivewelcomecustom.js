@@ -1,5 +1,5 @@
 //jQuery to collapse the navbar on scroll
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(".navbar").offset().top > 50) {
     $(".navbar-fixed-top").addClass("top-nav-collapse");
   } else {
@@ -9,18 +9,28 @@ $(window).scroll(function() {
 
 //easing scrolling
 //no easing /jquery UI needed
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+$(function () {
+  $("a[href*=#]:not([href=#])").click(function () {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
       var target = $(this.hash);
       var hashstring = this.hash.slice(1);
-      target = target.length ? target : $('[name=' + hashstring + ']');
+      target = target.length ? target : $("[name=" + hashstring + "]");
       if (target.length) {
-        $('html,body').stop().animate({
-          scrollTop: target.offset().top - 100
-        }, 1000, function() {
-          location.hash = hashstring; //attach the hash (#jumptarget) to the pageurl
-        });
+        $("html,body")
+          .stop()
+          .animate(
+            {
+              scrollTop: target.offset().top - 100,
+            },
+            1000,
+            function () {
+              location.hash = hashstring; //attach the hash (#jumptarget) to the pageurl
+            }
+          );
         return false;
       }
     }
@@ -29,29 +39,31 @@ $(function() {
 
 //function to concatonate and add ellipses to long titles...
 function textShorten(str, chars) {
-  if(str == null || str.length == null)
-     return "&hellip;";
+  if (str == null || str.length == null) return "&hellip;";
   var useWordBoundary = true;
   var isTooLong = str.length > chars,
     s_ = isTooLong ? str.substr(0, chars - 1) : str;
-  s_ = (useWordBoundary && isTooLong) ? s_.substr(0, s_.lastIndexOf(' ')) : s_;
-  return isTooLong ? s_ + '&hellip;' : s_;
+  s_ = useWordBoundary && isTooLong ? s_.substr(0, s_.lastIndexOf(" ")) : s_;
+  return isTooLong ? s_ + "&hellip;" : s_;
 }
 var posts = null;
 //$(document).ready(function() {
 $.ajaxSetup({
-  cache: true
+  cache: true,
 });
-$.getScript('//connect.facebook.net/en_US/sdk.js', function() {
+$.getScript("//connect.facebook.net/en_US/sdk.js", function () {
   FB.init({
-    appId: '600350606801127',
-    version: 'v3.0' // or v2.1, v2.2, v2.3, ...
+    appId: "600350606801127",
+    version: "v7.0", // or v2.1, v2.2, v2.3, ...
   });
 
   //get recent posts
   FB.api(
-    "/161256610565493/posts?limit=5&fields=link,attachments{title,description,url,media,target,type},picture,full_picture,message,story,event&access_token=600350606801127|xmbJ8xiD7cDXyAM8elE81GdmW3Y",
-    function(response) {
+    "/161256610565493/posts?limit=5&fields=link,attachments{title,description,url,media,target,type},picture,full_picture,message,story,event&access_token=" +
+      atob(
+        "EAAIiBASouOcBAC9qmxL0bHrhj1vLHftYdn8YuiEOSaZCqf6OlZBcFUSlLDpZBfFzcpAjYGLOs44l6XAQnQXsrpSYf9ZASJX1fz0j7IizxI6gDk2Y549x39EWclDD8bEVNbbOgkc7oOZCJYiLJMfjDjiOBQFPjlZAV4VR3Vi0juYAZDZD"
+      ),
+    function (response) {
       console.log(response);
       if (response && !response.error) {
         posts = response.data; //got the posts
@@ -60,31 +72,76 @@ $.getScript('//connect.facebook.net/en_US/sdk.js', function() {
           var posthtml = "";
           var txtlen = 200;
           var imgHtml = "";
-          
+
           if (posts[i].picture && posts[i].picture.length > 0) {
-            imgHtml = ' <img src="' + posts[i].picture + '" class="fb-post-img" title="photo from FB post" alt="photo from FB post">';
+            imgHtml =
+              ' <img src="' +
+              posts[i].picture +
+              '" class="fb-post-img" title="photo from FB post" alt="photo from FB post">';
           }
 
           //if message and no link
           if (posts[i].message && !(posts[i].attachments.data.length > 0)) {
-            posthtml = '<a target="_blank" href="https://facebook.com/' + posts[i].id + '" title="Post from ' + posts[i].created_time + '" >' + imgHtml + '"' + textShorten(posts[i].message, txtlen) + '"</a>';
+            posthtml =
+              '<a target="_blank" href="https://facebook.com/' +
+              posts[i].id +
+              '" title="Post from ' +
+              posts[i].created_time +
+              '" >' +
+              imgHtml +
+              '"' +
+              textShorten(posts[i].message, txtlen) +
+              '"</a>';
           }
           //if message and link, sub li
           else if (posts[i].message && posts[i].attachments.data.length > 0) {
-            posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >' + imgHtml + '"' + textShorten(posts[i].message, txtlen) + '"</a>\
-              <ul><li>' + textShorten(posts[i].attachments.data[0].title, txtlen) + '</li></ul></a>';
+            posthtml =
+              '<a target="_blank" href="' +
+              posts[i].link +
+              '" title="' +
+              posts[i].attachments.data[0].description +
+              '" >' +
+              imgHtml +
+              '"' +
+              textShorten(posts[i].message, txtlen) +
+              '"</a>\
+              <ul><li>' +
+              textShorten(posts[i].attachments.data[0].title, txtlen) +
+              "</li></ul></a>";
           }
           //if no message, just a story
-//           else if (!posts[i].message && posts[i].story != null && posts[i].attachments.data.length > 0) {
-//             posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >' + imgHtml + '"' + textShorten(posts[i].attachments.data[0].title, txtlen) + '"</a>';
-//           }
+          //           else if (!posts[i].message && posts[i].story != null && posts[i].attachments.data.length > 0) {
+          //             posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >' + imgHtml + '"' + textShorten(posts[i].attachments.data[0].title, txtlen) + '"</a>';
+          //           }
           //if no message, just a share
           else if (!posts[i].message && posts[i].attachments.data.length > 0) {
-            posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].attachments.data[0].description + '" >' + imgHtml + '"' + textShorten(posts[i].attachments.data[0].description, txtlen) + '"</a>';
+            posthtml =
+              '<a target="_blank" href="' +
+              posts[i].link +
+              '" title="' +
+              posts[i].attachments.data[0].description +
+              '" >' +
+              imgHtml +
+              '"' +
+              textShorten(posts[i].attachments.data[0].description, txtlen) +
+              '"</a>';
           }
           //if no message, just a story
-          else if (!posts[i].message && !(posts[i].attachments.data.length > 0) && posts[i].story != null) {
-            posthtml = '<a target="_blank" href="' + posts[i].link + '" title="' + posts[i].story + '" >' + imgHtml + '"' + textShorten(posts[i].story, txtlen) + '"</a>';
+          else if (
+            !posts[i].message &&
+            !(posts[i].attachments.data.length > 0) &&
+            posts[i].story != null
+          ) {
+            posthtml =
+              '<a target="_blank" href="' +
+              posts[i].link +
+              '" title="' +
+              posts[i].story +
+              '" >' +
+              imgHtml +
+              '"' +
+              textShorten(posts[i].story, txtlen) +
+              '"</a>';
           }
 
           //set the  HTML for the post
@@ -109,7 +166,7 @@ $.getScript('//connect.facebook.net/en_US/sdk.js', function() {
 //});
 // $(document).ready(function() {
 // 	$('a.page-scroll').bind('click', function(e) {
-// 		var target = $(this).attr("href");	
+// 		var target = $(this).attr("href");
 //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 
 // 		var position = target.offset().top;

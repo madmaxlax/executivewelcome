@@ -52,7 +52,7 @@
       if (d.getElementById(id)) return;
       js = d.createElement(s);
       js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=600350606801127";
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=600350606801127";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
