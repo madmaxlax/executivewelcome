@@ -25,10 +25,26 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['emailaddress']) && isset($_REQU
 		$captcha=$_POST['g-recaptcha-response'];
 	}
 	$secret = '6Lds8xMUAAAAAJkOm3xh3CUAgktiDvEnQbEu2Kes';
-	$response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+	$ip = $_SERVER['REMOTE_ADDR'];
+
+//   $response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+  $url = 'https://www.google.com/recaptcha/api/siteverify';
+  $data = array('secret' => $secret, 'response' => $captcha, 'remoteip' => $ip);
+
+  $options = array(
+    'http' => array(
+      'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+      'method'  => 'POST',
+      'content' => http_build_query($data)
+    )
+  );
+  $context  = stream_context_create($options);
+  $response = file_get_contents($url, false, $context);
+  $response = json_decode($response,true);
 	if($response['success'] == false)
 	{
 		echo '<h2>You have been detected as a spammer, please go back and ensure you checked the box "I am no a robot"<a href="Javascript:history.go(-1);">Go Back</a></h2>';
+    //.$captcha=$_POST['g-recaptcha-response'].'<br/>'.print_r($response);
 	}
 	else //good, send email
 	{
