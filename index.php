@@ -7,9 +7,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Executive Welcome is a recruitment assistance service provided by Susie Chisolm in the Baltimore area.">
-  <meta name="author" content="Susie Chisolm">
-  <meta name="keywords" content="Susie Susanne Chisolm Executive Welcome Baltimore recruit recruitment new hire asssistance service baltimore metroplitan area">
+  <meta name="description" content="Executive Welcome is a recruitment assistance service provided by Lauren Marks in the Baltimore area.">
+  <meta name="author" content="Lauren Marks">
+  <meta name="keywords" content="Lauren Marks Susie Susanne Chisolm Executive Welcome Baltimore recruit recruitment new hire asssistance service baltimore metroplitan area">
 
   <title>Executive Welcome Baltimore</title>
 
@@ -146,24 +146,6 @@
           </div>
           <div class="col-lg-6">
             <div class="clearfix"></div>
-            <img src="/imgs/people/SusieChisolm225-auto.jpg" width=225 height=225 alt="Susie Chisolm" class="bio-image">
-            <h1 class="bio-header">Susie Chisolm</h1>
-            <p class="bio-text">Susie has lived in Baltimore most of her life. She loves Baltimore and can help your employee and their family connect in Baltimore to what makes it a fun place to live and work. Susie initially trained with one of the country's oldest independent
-              relocation assistance firms, Executive Arrangements, Inc. of Cleveland, OH. She is a Certified Tourism Ambassador™....part of a nationwide group of hospitality professionals who are dedicated to enhancing the visitor experience in Baltimore!
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <div class="clearfix"></div>
-            <img src="/imgs/people/nancypowell225-auto.png" width=225 height=225 alt="Nancy Powell" class="bio-image">
-            <h1 class="bio-header">Nancy Powell</h1>
-            <p class="bio-text">Nancy Powell moved to Baltimore as a department store buyer. Soon after, she met and married her husband who had moved to Baltimore to attend dental school. Nancy soon became the first woman vice president of Jos A Bank Clothiers. Despite
-              the fact that Baltimore had plenty of dentists, their love for Baltimore and all that the area offered, made them put down roots! They raised two children in Baltimore County and now enjoy a summer home on the Severn River in Anne Arundel
-              County.
-            </p>
-          </div>
-          <div class="col-lg-3"></div>
-          <div class="col-lg-6">
-            <div class="clearfix"></div>
             <img src="/imgs/people/laurensquaresmall.jpg" width=225 height=225 alt="Lauren Marks" class="bio-image">
             <h1 class="bio-header">Lauren Marks</h1>
             <p class="bio-text">Lauren was born and raised in Baltimore City and is familiar with the surrounding areas and counties. She is Baltimore's biggest fan and loves to help people fall in love with this beautifully unique city. She knows the flavors of the local
@@ -171,7 +153,15 @@
               the co-chair to her high school alumni association board. She has a Masters in Social Work and is married a fellow Baltimorean.
             </p>
           </div>
-          <div class="col-lg-3"></div>
+          <div class="col-lg-6">
+            <div class="clearfix"></div>
+            <img src="/imgs/people/SusieChisolm225-auto.jpg" width=225 height=225 alt="Susie Chisolm" class="bio-image">
+            <h1 class="bio-header">Susie Chisolm</h1>
+            <p class="bio-text">Susie has lived in Baltimore most of her life. She loves Baltimore and can help your employee and their family connect in Baltimore to what makes it a fun place to live and work. Susie initially trained with one of the country's oldest independent
+              relocation assistance firms, Executive Arrangements, Inc. of Cleveland, OH. She is a Certified Tourism Ambassador™....part of a nationwide group of hospitality professionals who are dedicated to enhancing the visitor experience in Baltimore!
+            </p>
+          </div>
+         
         </div>
         <!-- 				CTA Button -->
         <br/>
@@ -294,13 +284,7 @@
 								<img src="imgs/f_icon.svg" height="18px" alt=""> Facebook
 							</a> page
             </div>
-            <ul>
-              <li id="post1" class="fb-post-item">Loading...</li>
-              <li id="post2" class="fb-post-item">Loading...</li>
-              <li id="post3" class="fb-post-item">Loading...</li>
-              <li id="post4" class="fb-post-item">Loading...</li>
-              <li id="post5" class="fb-post-item">Loading...</li>
-            </ul>
+           
             <a href="https://www.facebook.com/ExecutiveWelcome/" target="_blank">
 									See more...
 									</a>
@@ -349,8 +333,8 @@
               <div class="fb-like" data-href="https://www.facebook.com/ExecutiveWelcome/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
             </div>
             <div class="contact-social-link">
-              <a href="https://www.linkedin.com/in/susie-chisolm-29843617" target="_blank">
-								<img src="imgs/linkedin_icon.svg" height="22px" alt=""> Susie Chisolm on LinkedIn
+              <a href="https://www.linkedin.com/in/lauren-marks-lcsw-c-483b3327/" target="_blank">
+								<img src="imgs/linkedin_icon.svg" height="22px" alt=""> Lauren Marks on LinkedIn
 							</a>
             </div>
 
@@ -420,7 +404,7 @@
 							</div> -->
               <img src="imgs/f_icon.svg" height="22px" class="img-social" alt=""> Facebook
             </a>
-            <a href="https://www.linkedin.com/in/susie-chisolm-29843617">
+            <a href="https://www.linkedin.com/in/lauren-marks-lcsw-c-483b3327/">
               <!--<div class="circle linkedin">
 								<span class="fa fa-linkedin"></span>
 							</div>-->
@@ -428,7 +412,7 @@
             </a>
             <br>(410) 575-3756
             <br>Copyright © 2009-
-            <?php echo date("Y"); ?> <a href="http://executivewelcomebaltimore.com">Susie Chisolm</a>.
+            <?php echo date("Y"); ?> <a href="http://executivewelcomebaltimore.com">Lauren Marks</a>.
             <br>Baltimore photos courtesy of <a href="http://www.ronsolomonphoto.com/" target="_blank">Ron Solomon</a>.
             <br>Site by <a href="http://madmaxlax.com" target="_blank">Max Struever</a> and design by <a href="http://alexakaminsky.com" target="_blank">Alexa Kaminsky</a>.
             <br><a href="http://madewithloveinbaltimore.org" target="_blank">Made with &hearts; in Baltimore</a>
