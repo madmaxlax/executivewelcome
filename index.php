@@ -7,8 +7,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Executive Welcome is a recruitment assistance service provided by Lauren Marks in the Baltimore area.">
+  <meta name="description" content="Executive Welcome is a boutique recruitment assistance service provided by Lauren Marks in the Baltimore area.">
   <meta name="author" content="Lauren Marks">
+  <meta property="og:image" content="/imgs/logo-only_inverted-.png" />
   <meta name="keywords" content="Lauren Marks Susie Susanne Chisolm Executive Welcome Baltimore recruit recruitment new hire asssistance service baltimore metroplitan area">
 
   <title>Executive Welcome Baltimore</title>
@@ -179,7 +180,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h1 class="sectionhr"><span class="sectionhr-header">Relocation and Recruitment Assistance Services:</span></h1>
+            <h1 class="sectionhr"><span class="sectionhr-header">Boutique Relocation and Recruitment Assistance Services:</span></h1>
             <div class="row">
               <ul class="col-md-5 col-sm-12">
                 <li>
@@ -325,7 +326,7 @@
             <h1 class="sectionhr"><span class="sectionhr-header">Contact Us</span></h1>
             <br/>
             <h2 class="section-subhead">Would you like to know more? Please feel free to reach out to us!</h2>
-            <h2 class="section-subhead">Call 443-600-0212</h2>
+            <h2 class="section-subhead">Call 443-770-2695</h2>
             <div class="contact-social-link">
               <a href="https://www.facebook.com/ExecutiveWelcome/" target="_blank">
 								<img src="imgs/f_icon.svg" height="22px" alt=""> Executive Welcome on Facebook
@@ -410,7 +411,7 @@
 							</div>-->
               <img src="imgs/linkedin_icon.svg" height="22px" class="img-social" alt=""> LinkedIn
             </a>
-            <br>443-600-0212
+            <br>443-770-2695
             <br>Copyright © 2009-
             <?php echo date("Y"); ?> <a href="http://executivewelcomebaltimore.com">Lauren Marks</a>.
             <br>Baltimore photos courtesy of <a href="http://www.ronsolomonphoto.com/" target="_blank">Ron Solomon</a>.
