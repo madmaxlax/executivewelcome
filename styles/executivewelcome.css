@@ -7041,6 +7041,9 @@ ul.nav li.active:not(.navbar-logo) > a:focus {
     width: 1%;
     font-weight: bolder;
   }
+  .top-nav-collapse .subtitle-nav {
+    display: none;
+  }
 }
 .cd-scrolling-bg {
   background-color: #ffffff;
