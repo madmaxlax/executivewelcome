@@ -6856,7 +6856,7 @@ a :focus {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 100;
 }
-.navbar .navbar-logo h1 {
+.navbar .navbar-logo .logo-heading {
   padding: 0;
   margin: 0;
 }
@@ -7413,7 +7413,7 @@ section.intro-section h1 {
     border-radius: 4px;
   }
 }
-#footer .navbar-logo h1 {
+#footer .navbar-logo .logo-heading {
   padding: 0;
   margin: 0;
 }
@@ -7519,17 +7519,16 @@ section.intro-section h1 {
   background: #2585B7;
 }
 .cd-fixed-bg.cd-bg-1 {
-  /*   background-image: url("../imgs/bgs/BALTOPHOTOblurredlayer.jpg"); */
   background-image: url("../imgs/bgs/fedhill-min.jpg");
+  background-image: image-set(url("../imgs/bgs/fedhill-min.webp") type("image/webp"), url("../imgs/bgs/fedhill-min.jpg") type("image/jpeg"));
 }
 .cd-fixed-bg.cd-bg-2 {
-  /*   background-image: url("http://placehold.it/350x250?text=img2"); */
-  /*   background-image: url("../imgs/bgs/fedhill.jpg"); */
   background-image: url("../imgs/bgs/aquar-min.jpg");
+  background-image: image-set(url("../imgs/bgs/aquar-min.webp") type("image/webp"), url("../imgs/bgs/aquar-min.jpg") type("image/jpeg"));
 }
 .cd-fixed-bg.cd-bg-3 {
-  /*   background-image: url("http://placehold.it/350x250?text=img4"); */
   background-image: url("../imgs/WolfFamily-E-Smaller.jpg");
+  background-image: image-set(url("../imgs/WolfFamily-E-Smaller.webp") type("image/webp"), url("../imgs/WolfFamily-E-Smaller.jpg") type("image/jpeg"));
 }
 @media (min-width: 768px) {
   .cd-fixed-bg.cd-bg-3 {
@@ -7537,11 +7536,11 @@ section.intro-section h1 {
   }
 }
 .cd-fixed-bg.cd-bg-4 {
-  /*   background-image: url("http://placehold.it/350x250?text=3-imgs-here"); */
   background-image: url("../imgs/bgs/skyline-smaller-min.jpg");
+  background-image: image-set(url("../imgs/bgs/skyline-smaller-min.webp") type("image/webp"), url("../imgs/bgs/skyline-smaller-min.jpg") type("image/jpeg"));
 }
 .cd-fixed-bg.cd-bg-5 {
-  /*   background-image: url("http://placehold.it/350x250?text=img5"); */
   background-image: url("../imgs/bgs/camdenyards-min.jpg");
+  background-image: image-set(url("../imgs/bgs/camdenyards-min.webp") type("image/webp"), url("../imgs/bgs/camdenyards-min.jpg") type("image/jpeg"));
 }
 /*# sourceMappingURL=executivewelcome.map */
